@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+
+
+			$(document).on('click', '[data-menu-btn]', function () {
+				var tg = $(this).data('menu-btn');
+				// $('.menu_track > li').removeClass('on')
+				$(this).parent().addClass('on').siblings().removeClass('on');
+
+				$('[data-menu-content=' + tg + ']').show().siblings().hide();
+
+			})
+
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-page-title="이체"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+			<div class="container pt_6 pb_6">
+				<div class="txt_c">
+					<span class="d_b txt_gray txt_normal">우체국 계좌에서 다른은행 이체까지</span>
+					<strong class="txt_size35">이체 서비스</strong>
+				</div>
+				<ul class="br_link_list mt_8">
+					<li class="bg_transfer1">
+						<a href="#;">
+							<div class="top"><strong>즉시이체</strong></div>
+							<div class="btm">우체국 계좌 뿐 아니라 다른은행 계좌도 이체할 수 있습니다.</div>
+						</a>
+					</li>
+					<li class="bg_transfer2">
+						<a href="#;">
+							<div class="top"><strong>우체국 계좌로 가져오기</strong></div>
+							<div class="btm">다른은행에서 우체국 계좌로 이체하는 서비스입니다.</div>
+						</a>
+					</li>
+					<li class="bg_transfer3">
+						<a href="#;">
+							<div class="top"><strong>잔액모으기</strong></div>
+							<div class="btm">다른은행에 흩어져 있는 잔액을 우체국계좌로 한번에 모을 수 있습니다.</div>
+						</a>
+					</li>
+					<li class="bg_transfer4">
+						<a href="#;">
+							<div class="top"><strong>예적금 입금</strong></div>
+							<div class="btm">우체국 예금, 적금 계좌로 이체하는 서비스입니다.</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- s: 공통 레이어 로딩 -->
+			<div class="common_layers"></div>
+			<!-- e: 공통 레이어 로딩 -->
+
+			<!-- e: 본문 -->
+		</div>
+	</div>
+</body>
+
+</html>

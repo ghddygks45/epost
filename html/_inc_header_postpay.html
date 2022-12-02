@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+</head>
+
+<body class="allmenu_open">
+	<header class="header">
+		<!-- s: 타이틀 바 -->
+		<div class="titlebar postpay">
+			<div class="left">
+				<h1 class="tit_page">{$Title}</h1>
+			</div>
+			<div class="right">
+				<a href="#;" class="btn btn_icon">
+					<i class="ico ico_alert"></i>
+					<!-- 읽어야 할 알림이 있을 때 alert에 class 'on' 추가 -->
+					<span class="alert on">알림있음</span>
+					<span class="sr_only">알림</span>
+				</a>
+				<a href="#;" class="btn btn_icon">
+					<i class="ico ico_postpay_home"></i>
+					<span class="sr_only">홈</span>
+				</a>
+				<a href="#;" class="btn btn_icon btn_allmenu">
+					<i class="ico ico_allmenu"></i>
+					<span class="sr_only">전체메뉴</span>
+				</a>
+			</div>
+		</div>
+		<!-- e: 타이틀 바 -->
+
+		<!-- s: 전체메뉴 - 포스트페이 마이홈 하프시트 -->
+		<div class="allmenu allmenu_postpay">
+			<div class="dimed"></div>
+			<div class="allmenu_inner">
+				<div class="allmenu_header">
+					<div class="header_top_area">
+						<div class="allmenu_title">
+							<h2 class="sr_only">전체메뉴</h2>
+							<i class="ico ico_mailbox_md"></i>
+							<p class="welcome txt_gray">홍길동님 안녕하세요!</p>
+						</div>
+						<div class="toolbar">
+							<a href="#;" class="btn btn_icon">
+								<i class="ico ico_settings"></i>
+								<span class="sr_only">설정</span>
+							</a>
+						</div>
+					</div>
+					<div class="postpay_oveview">
+						<div class="bg"></div>
+						<dl class="postpay_money_box">
+							<dt>포스트페이머니</dt>
+							<dd>
+								<p class="cash">
+									<strong class="num">190</strong>
+									<span class="unit">캐시</span>
+								</p>
+								<ul class="status">
+									<li>
+										<span class="tit">우체국계좌</span>
+										<span class="val">2</span>
+									</li>
+									<li>
+										<span class="tit">체크카드</span>
+										<span class="val">1</span>
+									</li>
+									<li>
+										<span class="tit">오픈계좌</span>
+										<span class="val">0</span>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<ul class="postpay_status">
+							<li>
+								<i class="ico ico_xs_traffic"></i>
+								<span class="tit">교통카드</span>
+								<span class="val">이용중</span>
+							</li>
+							<li>
+								<i class="ico ico_xs_zero"></i>
+								<span class="tit">제로페이</span>
+								<!-- <span class="val">동의</span> -->
+								<span class="val txt_lightgray">미동의</span>
+							</li>
+							<li>
+								<i class="ico ico_xs_class"></i>
+								<span class="tit">모임</span>
+								<span class="val">있음</span>
+							</li>
+							<li>
+								<i class="ico ico_xs_membership"></i>
+								<span class="tit">멤버쉽</span>
+								<span class="val">이용중</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="allmenu_body">
+					<nav class="lnb_area">
+						<div class="lnb_header">
+							<ul class="lnb_list">
+								<li>
+									<a href="#;">
+										<span>더치페이</span>
+									</a>
+									<!-- s: 등록 버튼 활성화시 : title="등록됨" 추가, 아이콘 _on로 변경 -->
+									<button type="button" class="btn btn_icon btn_favor" title="등록됨">
+										<i class="ico ico_star_on"></i>
+										<span class="sr_only">자주 쓰는 메뉴 등록</span>
+									</button>
+									<!-- e: 등록 버튼 활성화시 -->
+								</li>
+								<li>
+									<a href="#;">
+										<span>경조금 송금</span>
+									</a>
+									<!-- s: 등록 버튼 활성화시 : title="등록됨" 추가, 아이콘 _on로 변경 -->
+									<button type="button" class="btn btn_icon btn_favor" title="등록됨">
+										<i class="ico ico_star_on"></i>
+										<span class="sr_only">자주 쓰는 메뉴 등록</span>
+									</button>
+									<!-- e: 등록 버튼 활성화시 -->
+								</li>
+							</ul>
+						</div>
+						<ul class="lnb_list">
+							<li>
+								<a href="#;">금융캘린더</a>
+								<button type="button" class="btn btn_icon btn_favor">
+									<i class="ico ico_star_off"></i>
+									<span class="sr_only">자주 쓰는 메뉴 등록</span>
+								</button>
+							</li>
+							<li>
+								<a href="#;">QR체크인</a>
+								<button type="button" class="btn btn_icon btn_favor">
+									<i class="ico ico_star_off"></i>
+									<span class="sr_only">자주 쓰는 메뉴 등록</span>
+								</button>
+							</li>
+							<li>
+								<a href="#;">결제</a>
+								<ul>
+									<li>
+										<a href="#;">
+											<span>포스트페이</span>
+										</a>
+										<button type="button" class="btn btn_icon btn_favor">
+											<i class="ico ico_star_off"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+									</li>
+									<li>
+										<a href="#;">
+											<span>제로페이</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+										<button type="button" class="btn btn_icon btn_favor">
+											<i class="ico ico_star_off"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+									</li>
+									<li>
+										<a href="#;">
+											<span>교통결제</span>
+										</a>
+										<button type="button" class="btn btn_icon btn_favor">
+											<i class="ico ico_star_off"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#;">
+									<span>송금</span>
+								</a>
+								<ul>
+									<li>
+										<a href="#;">
+											<span>전화번호 송금</span>
+										</a>
+										<!-- s: 등록 버튼 활성화시 : title="등록됨" 추가, 아이콘 _on로 변경 -->
+										<button type="button" class="btn btn_icon btn_favor" title="등록됨">
+											<i class="ico ico_star_on"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+										<!-- e: 등록 버튼 활성화시 -->
+									</li>
+									<li>
+										<a href="#;">
+											<span>계좌번호 송금</span>
+										</a>
+										<button type="button" class="btn btn_icon btn_favor">
+											<i class="ico ico_star_off"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+									</li>
+									<li>
+										<a href="#;">
+											<span>더치페이</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+										<button type="button" class="btn btn_icon btn_favor">
+											<i class="ico ico_star_off"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+									</li>
+									<li>
+										<a href="#;">
+											<span>QR송금</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+										<button type="button" class="btn btn_icon btn_favor">
+											<i class="ico ico_star_off"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#;">통합이용조회</a>
+								<button type="button" class="btn btn_icon btn_favor">
+									<i class="ico ico_star_off"></i>
+									<span class="sr_only">자주 쓰는 메뉴 등록</span>
+								</button>
+							</li>
+							<li>
+								<a href="#;">
+									<span>생활 금융 서비스</span>
+								</a>
+								<ul>
+									<li>
+										<a href="#;">
+											<span>모임 서비스</span>
+										</a>
+										<!-- s: 등록 버튼 활성화시 : title="등록됨" 추가, 아이콘 _on로 변경 -->
+										<button type="button" class="btn btn_icon btn_favor" title="등록됨">
+											<i class="ico ico_star_on"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+										<!-- e: 등록 버튼 활성화시 -->
+									</li>
+									<li>
+										<a href="#;">
+											<span>경조금 배달 서비스</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+										<button type="button" class="btn btn_icon btn_favor">
+											<i class="ico ico_star_off"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+									</li>
+									<li>
+										<a href="#;">
+											<span>우체국 쇼핑 서비스</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+										<button type="button" class="btn btn_icon btn_favor">
+											<i class="ico ico_star_off"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+									</li>
+									<li>
+										<a href="#;">
+											<span>제로페이 상품권 서비스</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+										<button type="button" class="btn btn_icon btn_favor">
+											<i class="ico ico_star_off"></i>
+											<span class="sr_only">자주 쓰는 메뉴 등록</span>
+										</button>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#;">
+									<span>고객센터</span>
+								</a>
+								<button type="button" class="btn btn_icon btn_favor">
+									<i class="ico ico_star_off"></i>
+									<span class="sr_only">자주 쓰는 메뉴 등록</span>
+								</button>
+								<ul>
+									<li>
+										<a href="#;">
+											<span>자주하는 질문</span>
+										</a>
+									</li>
+									<li>
+										<a href="#;">
+											<span>이용가이드</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+									</li>
+									<li>
+										<a href="#;">
+											<span>우체국앱서비스</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+									</li>
+									<li>
+										<a href="#;">
+											<span>이벤트</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+									</li>
+									<li>
+										<a href="#;">
+											<span>새소식</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+									</li>
+									<li>
+										<a href="#;">
+											<span>서비스이용약관</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+									</li>
+									<li>
+										<a href="#;">
+											<span>서비스 해지</span>
+											<i class="lab_menu lab_red"><span>NEW</span></i>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<button type="button" class="btn btn_allmenu_close">
+					<i class="ico ico_close"></i>
+					<span class="sr_only">닫기</span>
+				</button>
+			</div>
+		</div>
+		<!-- e: 전체메뉴 - 포스트페이 마이홈 하프시트 -->
+	</header>
+</body>
+
+</html>

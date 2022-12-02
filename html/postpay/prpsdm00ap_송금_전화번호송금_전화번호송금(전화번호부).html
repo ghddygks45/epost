@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>[팝업] 현재화면명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+			var $personSlide = $('.persons_slide');
+			$personSlide.slick({
+				draggable: true,
+				arrows: false,
+				infinite: false,
+				autoplay: false,
+				// slidesToShow: 4.5,
+				// slidesToScroll: 4.5,
+				slidesToScroll: 4,
+				variableWidth: true
+			});
+
+			var $scroll_menu_list = $('.scroll_menu_list');
+			$scroll_menu_list.slick({
+				draggable: true,
+				arrows: true,
+				infinite: false,
+				autoplay: false,
+				fade: false,
+				dots: false,
+				centerMode: false,
+				slidesToShow: 4,
+			});
+
+			$('.scroll_menu_li').eq(0).addClass('on');
+			$('.scroll_menu_li>.btn').click(function () {
+				if ($(this).parent().hasClass('on')) {
+					$('.on').removeClass('on');
+					$(this).parent().addClass('on');
+				} else {
+					$('.on').removeClass('on');
+					$(this).parent().addClass('on');
+				};
+			});
+		});
+	</script>
+</head>
+
+<body class="popup">
+	<div class="popup_inner">
+		<div class="popup_header">
+			<h1 class="popup_tit">전화번호부</h1>
+		</div>
+		<div class="popup_body">
+			<div class="container">
+				<div class="invite_wrap">
+					<ul>
+						<li>
+							<a href="#" class="invite_item">
+								<span>김길동</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>강명길</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>나희선</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>김아름</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>권공공</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>김동철</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>이길동</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>이우정</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>고길동</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>이산이</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>김푸름</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>진달래</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>강봄봄</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>권여름</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="invite_item">
+								<span>신가을</span>
+								<em>010-0000-0000</em>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="popup_footer pt_0">
+			<div class="fixed_menu_wrap favorit_wrap">
+				<div class="scroll_menu_box">
+					<a href="#" class="arrow prev">
+						<span class="sr_only">이전</span>
+					</a>
+					<div class="scroll_menu_list clfx">
+						<div class="scroll_menu_li">
+							<button type="button" class="btn">전체</button>
+						</div>
+						<div class="scroll_menu_li">
+							<button type="button" class="btn">가족</button>
+						</div>
+						<div class="scroll_menu_li">
+							<button type="button" class="btn">친구들</button>
+						</div>
+						<div class="scroll_menu_li">
+							<button type="button" class="btn">회사동료</button>
+						</div>
+						<div class="scroll_menu_li">
+							<button type="button" class="btn">회사동료</button>
+						</div>
+						<div class="scroll_menu_li">
+							<button type="button" class="btn">회사동료</button>
+						</div>
+					</div>
+					<a href="#" class="arrow next">
+						<span class="sr_only">다음</span>
+					</a>
+				</div>
+				<div class="board_search mt_4">
+					<input type="text" class="tf" title="이름, 전화번호 검색 입력" placeholder="이름, 전화번호로 검색">
+					<a href="#;" class="btn_search">
+						<span class="sr_only">검색</span>
+					</a>
+				</div>
+				<div class="postpay">
+					<ul class="persons_list persons_slide">
+						<li>
+							<a href="#" class="box box_border">
+								<i class="ico ico_person"></i>
+								<span>김길동</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="box box_border">
+								<i class="ico ico_person"></i>
+								<span>나희선</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="box box_border">
+								<i class="ico ico_person"></i>
+								<span>이우정</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="box box_border">
+								<i class="ico ico_person"></i>
+								<span>김길동</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="box box_border">
+								<i class="ico ico_person"></i>
+								<span>나희선</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="box box_border">
+								<i class="ico ico_person"></i>
+								<span>이우정</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="box box_border add">
+								<i class="ico ico_plus_sm"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<!-- 송금홈 공통 붙여넣어야 함. -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- s: 공통 레이어 로딩 -->
+	<div class="common_layers"></div>
+	<!-- e: 공통 레이어 로딩 -->
+	<button type="button" class="btn btn_close_popup" onclick="closeWindow();">닫기</button>
+</body>
+
+</html>

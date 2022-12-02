@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+			// 비주얼 배너 슬라이더
+
+			// 결재함 상세 확인
+			approveBoxToggle();
+			$('#chk_approv_box').change(function () {
+				approveBoxToggle();
+			});
+
+			function approveBoxToggle() {
+				if ($('#chk_approv_box').prop('checked')) {
+					$('.approv_box_body').slideDown('fast');
+				} else {
+					$('.approv_box_body').slideUp('fast');
+				}
+			}
+
+			// 자주쓰는 메뉴
+			favorMenuControl();
+
+			// 이벤트 배너 슬라이더
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-inc="_inc_header_main.html" data-page-title="우체국 기업 스마트뱅킹"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+
+			<section class="sec_home">
+				<h2 class="sr_only">메인 홈</h2>
+
+				<!-- s: 로그인 전 -->
+				<div>
+					<!-- s: 인사말 -->
+					<div class="welcome_info">
+						<div class="container">
+							<p class="pt_1">
+								<i class="ico ico_quot_blue mr_1"></i>
+								고객님 오늘도 행복한 하루 되세요!
+							</p>
+						</div>
+					</div>
+					<!-- e: 인사말 -->
+
+					<!-- s: 비주얼배너 슬라이더 -->
+					<div class="visual_banner">
+						<p class="txt_c pt_20 pb_20 txt_white">비주얼배너 슬라이더 영역</p>
+					</div>
+					<!-- e: 비주얼배너 슬라이더 -->
+				</div>
+				<!-- e: 로그인 전 -->
+
+				<!-- s: 로그인 후 -->
+				<div>
+					<!-- s: 인사말 -->
+					<div class="welcome_info after_login">
+						<div class="container">
+							<p class="welcome">
+								<i class="ico ico_mailbox_md mr_1"></i>
+								<span class="name">(주)모모산업</span>님 안녕하세요!
+							</p>
+							<p class="last_access">최근접속시간 : 2022-01.22 16:45</p>
+						</div>
+					</div>
+					<!-- e: 인사말 -->
+
+					<!-- s: 알람 레이어 : 간편결재설정 전 -->
+					<div class="layer_top_alarm bg_lightgray">
+						<div class="container">
+							<div class="alarm_cont">
+								<div class="cont">
+									<p class="txt_normal pr_6">(주)모모산업님 간편설정을 하시면 Push alarm을 통해 빠른 결재가 가능합니다.</p>
+									<div class="mt_2">
+										<a href="#;" class="btn btn_md btn_outline_default btn_round">
+											<span>간편결재설정</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="btn btn_icon btn_close_alarm"
+								onclick="$(this).closest('.layer_top_alarm').slideUp('fast');">
+								<i class="ico ico_close"></i>
+								<span class="sr_only">알람 닫기</span>
+							</button>
+						</div>
+					</div>
+					<!-- e: 알람 레이어 : 간편결재설정 전 -->
+
+					<!-- s: 알람 레이어 : 간편결재설정 후 -->
+					<div class="layer_top_alarm">
+						<div class="container">
+							<div class="alarm_cont">
+								<div class="icon">
+									<i class="ico ico_alarm"></i>
+									<h3 class="sr_only">알람</h3>
+								</div>
+								<div class="cont">
+									<div class="status">
+										<span class="btn btn_xs btn_round btn_white mr_1">기업 간편결제 알림</span>
+										<p>2022.08.07 10:37</p>
+									</div>
+									<p class="subject">
+										<strong>김직원님이 급여이체 승인 요청을 하였습니다.</strong>
+									</p>
+									<div class="mt_2">
+										<a href="#;" class="btn btn_md btn_outline_default btn_round">
+											<span>간편결재 설정 변경</span>
+										</a>
+										<a href="#;" class="btn btn_md btn_primary btn_round ml_1">
+											<span>바로 결재하기</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="btn btn_icon btn_close_alarm"
+								onclick="$(this).closest('.layer_top_alarm').slideUp('fast');">
+								<i class="ico ico_close"></i>
+								<span class="sr_only">알람 닫기</span>
+							</button>
+						</div>
+					</div>
+					<!-- e: 알람 레이어 : 간편결재설정 후 -->
+
+					<!-- s: 계좌 정보 : 홈 -->
+					<section class="acc_info_area acc_info_area_home">
+						<div class="bg bg_biz_default"></div>
+
+						<!-- s: 결재함 -->
+						<div class="approv_box">
+							<div class="approv_box_header">
+								<div class="left">
+									<h3 class="tit">결재함</h3>
+									<div>
+										확인
+										승인
+										전결
+									</div>
+								</div>
+								<div class="right">
+									<span class="check_switch check_switch_sm">
+										<input type="checkbox" id="chk_approv_box" checked>
+										<label for="chk_approv_box">
+											<span class="sr_only">결재함 상세 확인</span>
+										</label>
+									</span>
+								</div>
+							</div>
+							<div class="approv_box_body">
+								<dl class="my_works">
+									<dt>내 결재 대상 2건</dt>
+									<dd>
+										<ul class="work_list">
+											<li>
+												<a href="#;">
+													급여이체
+												</a>
+											</li>
+											<li>
+												<a href="#;">
+													급여이체
+												</a>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<!-- s: 결재함 -->
+
+						<div class="acc_box">
+							<div class="acc_box_header">
+								<div class="info">
+									<h3 class="tit">기업든든MMDA통장</h3>
+									<p class="acc_num">100081-02-024210</p>
+								</div>
+								<div class="toolbar">
+									<span class="check_switch check_switch_sm check_quick_transfer">
+										<input type="checkbox" id="chk_quick_transfer">
+										<label for="chk_quick_transfer">빠른이체</label>
+									</span>
+									<a href="#;" class="pl_1 ml_1">
+										<i class="ico ico_submenu"></i>
+										<span class="sr_only">계좌관리</span>
+									</a>
+								</div>
+							</div>
+							<div class="acc_box_body">
+								<div class="inner">
+									<div class="balance_area">
+										<strong class="balance_num">75,678,900</strong><span class="txt_xl">원</span>
+									</div>
+									<div class="add_quick">
+										<!-- s: 빠른이체 없을 때 -->
+										<span class="btn btn_outline_gray btn_sm btn_round">등록된 빠른이체가 없습니다</span>
+										<!-- e: 빠른이체 없을 때 -->
+
+										<!-- s: 빠른이체 있을 때 -->
+										<!-- 
+										<a href="#;" class="btn btn_outline_gray btn_sm btn_round"
+											onclick="openModal('layerQuickTransfer1', this); return false;">김직원</a>
+										<a href="#;" class="btn btn_outline_gray btn_sm btn_round"
+											onclick="openModal('layerQuickTransfer1', this); return false;">이모모</a> 
+										-->
+										<!-- e: 빠른이체 있을 때 -->
+
+										<a href="#;" class="btn btn_icon ml_1">
+											<i class="ico ico_plus_circle"></i>
+											<span class="sr_only">빠른이체 추가</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="acc_box_footer">
+								<div class="btn_area">
+									<a href="#;" class="btn">거래내역</a>
+									<a href="#;" class="btn">즉시이체</a>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- e: 계좌 정보 : 홈 -->
+				</div>
+				<!-- e: 로그인 후 -->
+			</section>
+
+			<!-- s: 자주 찾는 메뉴 -->
+			<section class="sec_favor_menu">
+				<h3 class="sr_only">자주 찾는 메뉴</h3>
+				<div class="container">
+					<div class="favor_menu_box">
+						<ul class="favor_menu_list">
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu1.png" alt="" class="icon">
+									<span>전계좌조회</span>
+									<i class="badge">New</i>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu2.png" alt="" class="icon">
+									<span>모바일번호표</span>
+									<i class="badge">New</i>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu3.png" alt="" class="icon">
+									<span>전자문서지갑</span>
+									<i class="badge">New</i>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu4.png" alt="" class="icon">
+									<span>해외송금</span>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu5.png" alt="" class="icon">
+									<span>공과금</span>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu6.png" alt="" class="icon">
+									<span>간편송금</span>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu7.png" alt="" class="icon">
+									<span>디지털OTP</span>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu8.png" alt="" class="icon">
+									<span>간편인증등록</span>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu9.png" alt="" class="icon">
+									<span>증명서발급</span>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu10.png" alt="" class="icon">
+									<span>자동이체</span>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu11.png" alt="" class="icon">
+									<span>송금받기</span>
+								</a>
+							</li>
+							<li>
+								<a href="#;">
+									<img src="/resources/img/common/ico_favor_menu12.png" alt="" class="icon">
+									<span>ATM출금</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<a href="#;" class="btn_box_handler">
+						<i class="ico ico_chevron_down_md"></i>
+						<span class="sr_only">펼치기</span>
+					</a>
+				</div>
+			</section>
+			<!-- e: 자주 찾는 메뉴 -->
+
+			<!-- s: 한 줄 공지 -->
+			<div class="sec_notice_ticker">
+				<div class="container">
+					<a href="#;">[당첨자발표]우체국온라인당뇨보험출시 이벤트</a>
+				</div>
+			</div>
+			<!-- e: 한 줄 공지 -->
+
+			<!-- s: 이벤트 배너 -->
+			<div class="sec_event_banner">
+				<div class="container">
+					<h3 class="txt_normal"><strong>이벤트 혜택</strong> 놓치지 마세요!</h3>
+				</div>
+				<div>
+					<p class="txt_c pt_10 pb_10">이벤트 슬라이더 영역</p>
+				</div>
+			</div>
+			<!-- e: 이벤트 배너 -->
+
+			<!-- s: 퀵바 로딩 _inc_bottom_quickbar.html -->
+			<div class="bottom_quickbar"></div>
+			<!-- e: 퀵바 로딩 -->
+
+			<!-- s: 공통 레이어 로딩 -->
+			<div class="common_layers"></div>
+			<!-- e: 공통 레이어 로딩 -->
+
+			<!-- e: 본문 -->
+		</div>
+	</div>
+</body>
+
+</html>

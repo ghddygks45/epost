@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+			$('.member_list_box .btn_close').on('click', function () {
+				var currentList = $(this).parent();
+				if (currentList.hasClass('list_del')) {
+					currentList.removeClass('list_del');
+				} else {
+					currentList.addClass('list_del');
+				}
+			})
+
+			$('.dutch_member').each(function () {
+				var btnGroup = $('.popup_footer').outerHeight();
+				var win = $(window).height();
+				var outItem = Number(win - (56 + 61 + 44 + btnGroup)) + 'px';
+				$('.member_list_box').css('height', outItem);
+			})
+		});
+	</script>
+</head>
+<!-- s: 마크업 : 2022-02-17 전체 수정 -->
+
+<body class="popup">
+	<div class="popup_inner">
+
+		<div class="popup_header">
+			<h2 class="popup_tit">더치페이 멤버 관리</h2>
+		</div>
+		<div class="popup_body">
+
+			<div class="postpay dutch_member">
+
+				<!-- s: 그룹 리스트-->
+				<div class="inner_scroll">
+					<ul class="member_group">
+						<li>
+							<div class="member_item bg_lightyellow">
+								<input type="radio" name="dutch_group" id="lb_member01">
+								<label for="lb_member01">점심멤버</label>
+							</div>
+						</li>
+						<li>
+							<div class="member_item bg_lightyellow">
+								<input type="radio" name="dutch_group" id="lb_member02">
+								<label for="lb_member02">점심멤버</label>
+							</div>
+						</li>
+						<li>
+							<div class="member_item bg_lightyellow">
+								<input type="radio" name="dutch_group" id="lb_member03">
+								<label for="lb_member03">점심멤버</label>
+							</div>
+						</li>
+						<li>
+							<div class="member_item bg_lightyellow">
+								<input type="radio" name="dutch_group" id="lb_member04">
+								<label for="lb_member04">점심멤버</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- e: 그룹 리스트-->
+				<div class="container pt_2">
+					<div class="d_flex pb_3">
+						<span>
+							<span><strong>3/20</strong>명</span>
+							<span class="txt_sm txt_gray">최대 20명까지 지정 가능해요</span>
+						</span>
+						<span>
+							<a href="#" class="btn btn_sm btn_round bg_lightgray">그룹명 수정</a>
+						</span>
+					</div>
+
+					<!-- s: option 1 멤버 목록 -->
+					<div class="box box_border member_list_box">
+						<div class="inner_scroll">
+							<ul class="member_set_list">
+								<li>
+									<strong class="name">홍길동</strong>
+									<p class="phone">010-1234-5678</p>
+									<button type="button" class="btn_close">멤버 삭제</button>
+								</li>
+								<li class="list_del">
+									<strong class="name">나희선</strong>
+									<p class="phone">010-1234-5678</p>
+									<button type="button" class="btn_close">멤버 삭제</button>
+								</li>
+								<li>
+									<strong class="name">이포페</strong>
+									<p class="phone">010-1234-5678</p>
+									<button type="button" class="btn_close">멤버 삭제</button>
+								</li>
+
+							</ul>
+							<!-- s: 데이터 없음
+							<div class="empty_box">
+								<i class="ico_warning_lg"></i>
+								<strong>전화번호부 또는 직접 입력을 선택하여<br>
+									초대할 모임 명단을 구성해주세요.</strong>
+							</div>
+								e: 데이터 없음 -->
+						</div>
+						<p class="txt_guide">멤버 삭제는 “그룹 저장”을 눌러야 최종 반영됩니다.</p>
+					</div>
+					<!-- e: option 1 멤버 목록 -->
+				</div>
+			</div>
+		</div>
+		<div class="popup_footer">
+			<div class="btn_group mt_1">
+				<a href="#" class="btn btn_lg btn_outline_default btn_block">+ 전화번호부에서 추가</a>
+				<a href="#" class="btn btn_lg btn_outline_default btn_block">+ 직접 입력 추가</a>
+				<a href="#" class="btn btn_lg btn_outline_default btn_block">+ 새 그룹 만들기</a>
+			</div>
+			<div class="btn_group btn_group_flex mt_2">
+				<a href="#;" class="btn btn_lg btn_outline_default">그룹삭제</a>
+				<a href="#;" class="btn btn_lg btn_primary">그룹저장</a>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn_close_popup" onclick="closeWindow();">닫기</button>
+	</div>
+
+	<!-- s: 공통 레이어 로딩 -->
+	<div class="common_layers"></div>
+	<!-- e: 공통 레이어 로딩 -->
+</body>
+<!-- e: 마크업 : 2022-02-17 전체 수정 -->
+
+</html>

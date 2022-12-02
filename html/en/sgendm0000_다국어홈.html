@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+
+		});
+	</script>
+</head>
+
+<body>
+	<!-- 영문 사이트 .wrapper_en 추가 -->
+	<div class="wrapper wrapper_en">
+		<header class="header" data-inc="_inc_header_en.html" data-page-title="우체국 스마트뱅킹"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+			<h2 class="sr_only">Main Home</h2>
+
+			<div class="main_cont">
+				<!-- s: 계좌 정보 : 홈 -->
+				<div class="acc_info_area acc_info_area_en_home">
+					<div class="bg"></div>
+					<!-- s: 로그인 전 노출 -->
+					<!-- <div class="welcome_info">
+						<p>With the post office, happy things happen</p>
+					</div>
+					<div class="acc_box pt_3">
+						<div class="acc_box_header just_right">
+							<div class="toolbar">
+								<a href="#;" class="pl_1 submenu" onclick="openModal('layerDepositManage', this); return false;">
+									<i class="ico ico_submenu_white"></i>
+									<span class="sr_only">Account Setting</span>
+								</a>
+							</div>
+						</div>
+						<div class="acc_box_body pb_0">
+							<div class="inner">
+								<i class="ico ico_before_login"></i>
+								<strong class="">Please use a variety of services after login!
+								</strong>
+							</div>
+						</div>
+						<div class="acc_box_footer">
+							<div class="btn_area">
+								<a href="#;" class="btn">Inquiry</a>
+								<a href="#;" class="btn">Transfer</a>
+							</div>
+						</div>
+					</div> -->
+					<!-- e: 로그인 전 노출 -->
+					<!-- s: 로그인 후 노출 -->
+					<div class="welcome_info after_login">
+						<p class="welcome">
+							<i class="ico ico_mailbox_md mr_1"></i>
+							<span class="name">Jone Doe</span>
+						</p>
+						<p class="last_access">Last access date : 2021.07.20 16:48</p>
+					</div>
+
+					<div class="acc_box">
+						<div class="acc_box_header">
+							<div class="info">
+								<h3 class="tit">스마트e-Postbank예금</h3>
+								<p class="acc_num">100081-02-024210</p>
+							</div>
+							<div class="toolbar">
+								<span class="check_switch check_switch_sm check_quick_transfer">
+									<input type="checkbox" id="chk_fast1">
+									<label for="chk_fast1">Quick</label>
+								</span>
+								<a href="#;" class="pl_1 submenu" onclick="openModal('layerDepositManage', this); return false;">
+									<i class="ico ico_submenu_white"></i>
+									<span class="sr_only">Account Setting</span>
+								</a>
+							</div>
+						</div>
+						<div class="acc_box_body">
+							<div class="inner">
+								<div class="balance_area">
+									<strong class="balance_num">$ 8,678,900</strong>
+								</div>
+								<div class="add_quick">
+									<!-- s: 빠른이체 없을 때 -->
+									<!-- <span class="btn btn_outline_gray btn_sm btn_round">등록된 빠른이체가 없습니다</span> -->
+									<!-- e: 빠른이체 없을 때 -->
+
+									<!-- s: 빠른이체 있을 때 -->
+
+									<a href="#;" class="btn btn_outline_gray btn_sm btn_round"
+										onclick="openModal('layerQuickTransfer1', this); return false;">김직원</a>
+									<a href="#;" class="btn btn_outline_gray btn_sm btn_round"
+										onclick="openModal('layerQuickTransfer1', this); return false;">이모모</a>
+
+									<!-- e: 빠른이체 있을 때 -->
+
+									<a href="#;" class="btn btn_icon ml_1"
+										onclick="openModal('layerQuickTransferList', this); return false;">
+										<i class="ico ico_plus_circle"></i>
+										<span class="sr_only">빠른이체 추가</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="acc_box_footer">
+							<div class="btn_area">
+								<a href="#;" class="btn">Inquiry</a>
+								<a href="#;" class="btn">Transfer</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 계좌 정보 : 홈 -->
+				<!-- e: 로그인 후 노출 -->
+				<div class="quick_menu_area">
+					<ul>
+						<li>
+							<a href="#;">
+								<span class="icon"><i class="ico ico_money_gram"></i></span>
+								<span>Money<br> Gram</span>
+							</a>
+						</li>
+						<li>
+							<a href="#;">
+								<span class="icon"><i class="ico ico_swift_remittance"></i></span>
+								<span>Swift<br> Remittance</span>
+							</a>
+						</li>
+						<li>
+							<a href="#;">
+								<span class="icon"><i class="ico ico_exchange_request"></i></span>
+								<span>Exchange<br> request</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="container pt_1 pb_10">
+
+					<div class="remittance_rate">
+						<h3 class="txt_normal">Remittance Rate (sending)</h3>
+						<div class="remittance_inner">
+							<dl>
+								<dt>
+									<span>USD</span>
+									USA
+								</dt>
+								<dd>1,152.00</dd>
+							</dl>
+							<dl>
+								<dt>
+									<span>USD</span>
+									USA
+								</dt>
+								<dd>1,152.00</dd>
+							</dl>
+							<dl>
+								<dt>
+									<span>USD</span>
+									USA
+								</dt>
+								<dd>1,152.00</dd>
+							</dl>
+						</div>
+					</div>
+
+					<div class="exchange_rates">
+						<div class="clfx mb_1">
+							<h3 class="f_l txt_lg txt_normal">Exchange Rates</h3>
+							<div class="f_r txt_xs txt_gray pt_2">2021.06.17.</div>
+						</div>
+						<div class="tbl mb_3">
+							<table>
+								<caption class="sr_only">Exchange Rates</caption>
+								<colgroup>
+									<col style="width: 44%;">
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Currency</th>
+										<th class="pl_1 pr_1" scope="col">Buying cash</th>
+										<th class="pl_1 pr_1" scope="col">Selling cash</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="txt_l pl_2 pr_2">United States
+										</td>
+										<td>1137.56 </td>
+										<td>1098.44 </td>
+									</tr>
+									<tr>
+										<td class="txt_l pl_2 pr_2">Japan
+										</td>
+										<td>1034.71 </td>
+										<td>999.13 </td>
+									</tr>
+									<tr>
+										<td class="txt_l pl_2 pr_2">China
+										</td>
+										<td>183.55 </td>
+										<td>166.07 </td>
+									</tr>
+									<tr>
+										<td class="txt_l pl_2 pr_2">The European Union
+										</td>
+										<td>1382.86</td>
+										<td>1329.18 </td>
+									</tr>
+									<tr>
+										<td class="txt_l pl_2 pr_2">Thailand
+										</td>
+										<td>37.65 </td>
+										<td>33.35 </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<a href="#;" class="btn btn_sm btn_round btn_outline_default btn_more f_r">More</a>
+
+				</div>
+			</div>
+
+			<!-- s: 공통 레이어 로딩 -->
+			<div class="common_layers"></div>
+			<!-- e: 공통 레이어 로딩 -->
+
+			<!-- e: 본문 -->
+		</div>
+	</div>
+</body>
+
+</html>

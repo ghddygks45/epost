@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-	.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+
+			$('.btn_submenu').click(function () {
+				$('.sub_toggle').hide();
+				$(this).siblings('.sub_toggle').show();
+			})
+
+			$('.btn_close_tooltip').click(function () {
+				$(this).parent().hide();
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-page-title="그룹관리"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+			<div class="container p_4">
+				<ul class="list list_box spacing_mt_2">
+					<li>
+						<div class="fx_lr">
+							<div class="l">
+								<h3 class="tit1 mb_0">등록그룹명 <span class="txt_light txt_xs txt_gray ml_1">2021.07.28</span></h3>
+							</div>
+						</div>
+						<div class="fx_lr">
+							<div class="l">
+								<strong class="txt_normal txt_lg d_b">2040+a 저축예금(월급통장)</strong>
+								<span class="txt_demigray txt_sm">100057-02-000010</span>
+							</div>
+						</div>
+						<div class="fx_lr fx_align_center mt_1">
+							<div class="l">
+								<span class="txt_demigray txt_xs">입금계좌 10개</span>
+							</div>
+							<div class="r">
+								<strong class="txt_bold txt20">60,000,000 <span class="txt_md">원</span></strong>
+							</div>
+						</div>
+						<div class="submenu_area mt_1 mr_2">
+							<button type="button" class="btn btn_submenu v_top"><span class="sr_only">세부 메뉴</span></button>
+							<div class="sub_toggle mt_1">
+								<button type="button" class="btn btn_icon btn_close_tooltip">
+									<i class="ico ico_close_sm"></i>
+									<span class="sr_only">닫기</span>
+								</button>
+								<div>
+									<a href="#;" onclick="openModal('layer01', this); return false;">상세정보</a>
+									<a href="scfttm10qsdm_예금_이체출금_이체관리_그룹이체관리_그룹수정_그룹명등록.html">그룹수정</a>
+									<a href="#;" onclick="openModal('alert01', this); return false;">그룹삭제</a>
+									<a href="scfttm10nsdm_예금_이체출금_이체관리_그룹이체관리_그룹등록_복사등록_그룹명등록.html">그룹복사</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="fx_lr">
+							<div class="l">
+								<h3 class="tit1 mb_0">등록그룹명 <span class="txt_light txt_xs txt_gray ml_1">2021.07.28</span></h3>
+							</div>
+						</div>
+						<div class="fx_lr">
+							<div class="l">
+								<strong class="txt_normal txt_lg d_b">2040+a 저축예금(월급통장)</strong>
+								<span class="txt_demigray txt_sm">100057-02-000010</span>
+							</div>
+						</div>
+						<div class="fx_lr fx_align_center mt_1">
+							<div class="l">
+								<span class="txt_demigray txt_xs">입금계좌 10개</span>
+							</div>
+							<div class="r">
+								<strong class="txt_bold txt20">60,000,000 <span class="txt_md">원</span></strong>
+							</div>
+						</div>
+						<div class="submenu_area mt_1 mr_2">
+							<button type="button" class="btn btn_submenu v_top"><span class="sr_only">세부 메뉴</span></button>
+							<div class="sub_toggle mt_1">
+								<button type="button" class="btn btn_icon btn_close_tooltip">
+									<i class="ico ico_close_sm"></i>
+									<span class="sr_only">닫기</span>
+								</button>
+								<div>
+									<a href="#;" onclick="openModal('layer01', this); return false;">상세정보</a>
+									<a href="scfttm10qsdm_예금_이체출금_이체관리_그룹이체관리_그룹수정_그룹명등록.html">그룹수정</a>
+									<a href="#;" onclick="openModal('alert01', this); return false;">그룹삭제</a>
+									<a href="scfttm10nsdm_예금_이체출금_이체관리_그룹이체관리_그룹등록_복사등록_그룹명등록.html">그룹복사</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="fx_lr">
+							<div class="l">
+								<h3 class="tit1 mb_0">등록그룹명 <span class="txt_light txt_xs txt_gray ml_1">2021.07.28</span></h3>
+							</div>
+						</div>
+						<div class="fx_lr">
+							<div class="l">
+								<strong class="txt_normal txt_lg d_b">2040+a 저축예금(월급통장)</strong>
+								<span class="txt_demigray txt_sm">100057-02-000010</span>
+							</div>
+						</div>
+						<div class="fx_lr fx_align_center mt_1">
+							<div class="l">
+								<span class="txt_demigray txt_xs">입금계좌 10개</span>
+							</div>
+							<div class="r">
+								<strong class="txt_bold txt20">60,000,000 <span class="txt_md">원</span></strong>
+							</div>
+						</div>
+						<div class="submenu_area mt_1 mr_2">
+							<button type="button" class="btn btn_submenu v_top"><span class="sr_only">세부 메뉴</span></button>
+							<div class="sub_toggle mt_1">
+								<button type="button" class="btn btn_icon btn_close_tooltip">
+									<i class="ico ico_close_sm"></i>
+									<span class="sr_only">닫기</span>
+								</button>
+								<div>
+									<a href="#;" onclick="openModal('layer01', this); return false;">상세정보</a>
+									<a href="scfttm10qsdm_예금_이체출금_이체관리_그룹이체관리_그룹수정_그룹명등록.html">그룹수정</a>
+									<a href="#;" onclick="openModal('alert01', this); return false;">그룹삭제</a>
+									<a href="scfttm10nsdm_예금_이체출금_이체관리_그룹이체관리_그룹등록_복사등록_그룹명등록.html">그룹복사</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="bottom_fixed_area">
+				<div class="btn_group btn_group_flex">
+					<a href="scfttm10ksdm_예금_이체출금_이체관리_그룹이체관리_그룹등록_신규등록_그룹명등록.html"
+						class="btn btn_xl btn_primary"><span>그룹등록</span></a>
+				</div>
+			</div>
+
+			<!-- s: 공통 레이어 로딩 -->
+			<div class="common_layers"></div>
+			<!-- e: 공통 레이어 로딩 -->
+
+			<!-- s: 그룹삭제 alert 팝업 -->
+			<div class="modal_popup modal_alert hide" data-popup="alert01">
+				<div class="dimed"></div>
+				<div class="popup_inner" tabindex="0">
+					<div class="popup_header">
+						<h2 class="popup_tit">그룹삭제</h2>
+						<button type="button" class="btn btn_close_popup">닫기</button>
+					</div>
+					<div class="popup_body">
+						<div class="container">
+							<p class="desc">기존 등록 그룹 정보를<br> 삭제하시겠습니까?</p>
+						</div>
+					</div>
+
+					<div class="popup_footer">
+						<div class="btn_group btn_group_flex">
+							<a href="#;" class="btn btn_lg btn_default" onclick="closeModal('alert01', this); return false;">아니오</a>
+							<a href="#;" class="btn btn_lg btn_primary" onclick="closeModal('alert01', this); return false;">예</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- e: 그룹삭제 alert 팝업 -->
+
+			<!-- s: 상세정보 팝업 -->
+			<div class="modal_popup popup show" data-popup="layer01">
+				<div class="dimed"></div>
+				<div class="popup_inner" tabindex="0">
+					<div class="popup_header">
+						<h2 class="popup_tit">그룹상세정보</h2>
+						<button type="button" class="btn btn_close_popup">닫기</button>
+					</div>
+					<div class="popup_body">
+						<div class="container p_4">
+							<div>
+								<h2 class="tit1">그룹정보</h2>
+								<!-- s: 20220208 -->
+								<div class="double_box">
+									<div class="btm">
+										<div>
+											<div class="l">그룹명</div>
+											<div class="r">급여계좌이체</div>
+										</div>
+										<div>
+											<div class="l">참고사항</div>
+											<div class="r">그룹설명</div>
+										</div>
+										<div>
+											<div class="l">입금통장표시내용</div>
+											<div class="r">표시내용</div>
+										</div>
+									</div>
+								</div>
+								<!-- e: 20220208 -->
+							</div>
+
+							<div class="mt_5">
+								<h2 class="tit1">송금정보 <span class="lab_status bg_darkgray">총 3건</span></h2>
+								<div class="box box_border">
+									<ul class="list list_transfer_info spacing_mt_1">
+										<li>
+											<div>
+												<div class="l">
+													<span class="num">1</span>
+													<div>
+														<span>하나은행</span>
+														<strong>김삼동</strong>
+													</div>
+												</div>
+												<div class="r">
+													<div>
+														<span>24502340200104</span>
+														<strong>5,500,000</strong>
+													</div>
+													<span class="lab_status outline_blue">정상</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div>
+												<div class="l">
+													<span class="num">2</span>
+													<div>
+														<span>하나은행</span>
+														<strong>김삼동</strong>
+													</div>
+												</div>
+												<div class="r">
+													<div>
+														<span>24502340200104</span>
+														<strong>5,500,000</strong>
+													</div>
+													<span class="lab_status outline_blue">정상</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div>
+												<div class="l">
+													<span class="num">3</span>
+													<div>
+														<span>하나은행</span>
+														<strong>김삼동</strong>
+													</div>
+												</div>
+												<div class="r">
+													<div>
+														<span>24502340200104</span>
+														<strong>5,500,000</strong>
+													</div>
+													<span class="lab_status outline_blue">정상</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="mt_5">
+									<h2 class="tit1">출금계좌정보</h2>
+									<div class="double_box">
+										<div class="btm">
+											<div>
+												<div class="l">출금계좌번호</div>
+												<div class="r">01001702023296</div>
+											</div>
+											<div>
+												<div class="l">출금통장표시내용</div>
+												<div class="r"></div>
+											</div>
+											<div>
+												<div class="l">보내는 분</div>
+												<div class="r">나봄미</div>
+											</div>
+											<div>
+												<div class="l">이체일</div>
+												<div class="r">2021.06.11 11:00</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="popup_footer">
+						<div class="btn_group btn_group_flex">
+							<a href="scfttm10nsdm_예금_이체출금_이체관리_그룹이체관리_그룹등록_복사등록_그룹명등록.html" class="btn btn_lg btn_default">그룹복사등록</a>
+							<a href="#;" class="btn btn_lg btn_primary" onclick="closeModal('layer01', this); return false;">확인</a>
+						</div>
+					</div>
+				</div>
+				<!-- e: 상세정보 팝업 -->
+
+				<!-- e: 본문 -->
+			</div>
+		</div>
+</body>
+
+</html>

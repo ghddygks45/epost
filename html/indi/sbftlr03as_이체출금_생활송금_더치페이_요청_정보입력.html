@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-page-title="더치페이"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+
+			<nav class="tab_menu tab_menu1">
+				<ul class="tab_list">
+					<li class="on"><a href="#;"><span>요청</span></a></li>
+					<li><a href="#;"><span>조회/변경</span></a></li>
+					<li><a href="#;"><span>납부</span></a></li>
+				</ul>
+			</nav>
+
+			<div class="container pt_1 pb_4">
+				<ul class="input_step">
+					<li class="on"><span class="num">1</span><span class="txt">정보입력</span></li>
+					<li><span class="num">2</span><span class="txt">입력확인</span></li>
+					<li><span class="num">3</span><span class="txt">실행완료</span></li>
+				</ul>
+
+				<div class="mt_1">
+					<h2 class="tit1">입금계좌정보</h2>
+					<div class="account_info_box">
+						<a href="#;" onclick="openModal('layerAccount'),this">
+							<span class="bank">
+								<img src="../../resources/img/content/ico_epost02.png" alt="우체국">
+							</span>
+							<div class="info">
+								<strong>스마트 e-Postbank 예금</strong>
+								<p>100057-02-000010</p>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- s: 이체금액 입력 -->
+				<div class="account_amount mt_8">
+					<div class=inner>
+						<a href="#n" onclick="openModal('amount_keypad', this); return false;">
+							<div class="amount_label">
+								<span>전체금액 <strong class="req">필수항목</strong></span>
+							</div>
+							<div class="amount_area">
+								<span class="txt_amt1">4,123,000</span>
+								<span class="txt_amt2">원</span>
+								<span class="txt_amt3">사백일십이만삼천원</span>
+							</div>
+						</a>
+						<button type="button" class="btn btn_icon btn_reset">
+							<i class="ico ico_reset"></i>
+							<span class="sr_only">초기화</span>
+						</button>
+					</div>
+					<!-- 2022-01-06 SB v1.01 / 이체한도 안내 문구 삭제 -->
+
+				</div>
+				<!-- e: 이체금액 입력 -->
+
+				<!-- s: 더치페이 명칭 입력 -->
+				<div class="tf_item mt_6">
+					<div class="tf_item_body">
+						<div class="input_area">
+							<label for="inp1_1" class="lab">더치페이 명칭 <span class="req">필수항목</span></label>
+							<input type="text" id="inp1_1" class="tf" value="점심">
+						</div>
+					</div>
+				</div>
+				<!-- e: 더치페이 명칭 입력 -->
+
+				<div class="mt_4">
+					<h3 class="tit2">더치페이 대상자를 추가해 주세요.</h3>
+					<div class="btn_group btn_group_flex">
+						<a href="#;" class="btn btn_md btn_md_ex btn_default"
+							onclick="openModal('phone_search', this); return false;">연락처</a>
+						<a href="#;" class="btn btn_md btn_md_ex btn_default"
+							onclick="openModal('layer01', this); return false;">이전내역</a>
+						<a href="sbftlr03ds_이체출금_생활송금_더치페이_요청_정보입력_멤버관리.html" class="btn btn_md btn_md_ex btn_default">멤버관리</a>
+					</div>
+				</div>
+
+				<!-- s: 더치페이 정보입력 -->
+				<div class="mt_5">
+					<div class="fx_lr fx_align_center">
+						<div class="l">
+							<h3 class="flex_container fx_align_center txt_medium txt_md">
+								<i class="ico ico_arr_circle_right mt_0 mr_1"></i>
+								더치페이 인원
+								<span class="lab_status bg_darkgray txt_sm txt_light ml_1"><span class="txt_medium">3</span> / 20</span>
+							</h3>
+						</div>
+						<div class="r">
+							<a href="#;" class="btn btn_sm btn_round bg_gray"><i class="ico ico_plus_sm_white mr_1"></i> 추가</a>
+						</div>
+					</div>
+					<div class="mt_2">
+						<ul class="list list_dutch spacing_mt_2">
+							<li>
+								<div class="l">
+									<span class="num">1</span>
+									<span class="info">
+										<input type="text" name="" id="inp2_1_1" class="tf name" placeholder="이름입력" value="나봄미">
+										<input type="text" name="" id="inp2_1_2" class="tf phone" placeholder="전화번호 입력"
+											value="010-1234-5678">
+									</span>
+								</div>
+								<div class="r">
+									<div class="bill">
+										<input type="text" name="" id="inp2_1_3" class="tf price" value="7,300"> 원
+									</div>
+									<a href="#;">
+										<i class="ico ico_reset"></i>
+										<span class="sr_only">초기화</span>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="l">
+									<span class="num">2</span>
+									<span class="info">
+										<input type="text" name="" id="inp2_1_1" class="tf name" placeholder="이름입력" value="강한나">
+										<input type="text" name="" id="inp2_1_2" class="tf phone" placeholder="전화번호 입력"
+											value="010-1234-5678">
+									</span>
+								</div>
+								<div class="r">
+									<div class="bill">
+										<input type="text" name="" id="inp2_1_3" class="tf price" value="7,300"> 원
+									</div>
+									<a href="#;">
+										<i class="ico ico_reset"></i>
+										<span class="sr_only">초기화</span>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="l">
+									<span class="num">3</span>
+									<span class="info">
+										<input type="text" name="" id="inp2_1_1" class="tf name" placeholder="이름입력">
+										<input type="text" name="" id="inp2_1_2" class="tf phone" placeholder="전화번호 입력">
+									</span>
+								</div>
+								<div class="r">
+									<div class="bill">
+										<input type="text" name="" id="inp2_1_3" class="tf price" value="7,300"> 원
+									</div>
+									<a href="#;">
+										<i class="ico ico_reset"></i>
+										<span class="sr_only">초기화</span>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="mt_2 input_items">
+						<span class="check_item type_btn_round">
+							<input type="radio" name="chk1" id="chk1_1" checked>
+							<label for="chk1_1">전체금액에서 본인제외</label>
+						</span>
+						<span class="check_item type_btn_round">
+							<input type="radio" name="chk1" id="chk1_2">
+							<label for="chk1_2">전체금액에서 본인추가</label>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- e: 더치페이 정보입력 -->
+
+			<!-- s: 하단 고정 영역 -->
+			<div class="bottom_fixed_area">
+				<div class="btn_group btn_group_flex">
+					<a href="sbftlr03es_이체출금_생활송금_더치페이_요청_입력확인.html" class="btn btn_xl btn_arr_right btn_primary">요청하기</a>
+				</div>
+			</div>
+			<!-- e: 하단 고정 영역 -->
+
+			<!-- s: 이체금액 bottom sheet -->
+			<div class="modal_popup modal_bottom_sheet hide no_dimed" data-popup="amount_keypad">
+				<div class="dimed"></div>
+				<div class="popup_inner" tabindex="0">
+					<div class="popup_header">
+						<h2 class="popup_tit">얼마를 보낼까요?</h2>
+					</div>
+					<div class="popup_body">
+						<div class="container">
+							<div class="money_select">
+								<a href="#n">1만</a>
+								<a href="#n" class="on">5만</a>
+								<a href="#n">10만</a>
+								<a href="#n">50만</a>
+								<a href="#n">100만</a>
+							</div>
+						</div>
+					</div>
+					<div class="popup_footer keypad">
+						<!-- s: 보안 키패드 영역 -->
+						<div class="txt_c">키패드 영역</div>
+						<!-- e: 보안 키패드 영역 -->
+					</div>
+					<button type="button" class="btn btn_close_popup">닫기</button>
+				</div>
+			</div>
+			<!-- e: 이체금액 bottom sheet -->
+
+			<!-- s: 연락처에서 불러오기 -->
+			<div class="modal_popup modal_bottom_sheet hide" data-popup="phone_search">
+				<div class="dimed"></div>
+				<div class="popup_inner" tabindex="0">
+					<div class="popup_header">
+						<h2 class="popup_tit">전화번호검색</h2>
+					</div>
+					<div class="popup_body">
+
+						<!-- 20220125 탭메뉴 삭제 -->
+
+						<div class="tf_item tf_item_md bg_lightgray border0">
+							<div class="tf_item_body">
+								<div class="input_area pt_0">
+									<input type="text" id="phone_search_inp1_1" class="tf txt_light" placeholder="초성, 이름 검색">
+								</div>
+								<div class="btn_area">
+									<a href="#;" class="btn btn_search"><span class="sr_only">검색</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<ul class="list list_phone_book">
+								<li>
+									<span class="phone_thumb">
+										<img src="../../resources/img/content/img_phone_thumb_default.png" alt="전화번호부">
+									</span>
+									<div class="fx_lr">
+										<div class="l"><strong>강순이</strong>010-1234-5678</div>
+										<div class="r">
+											<a href="#;" class="btn btn_sm btn_round btn_darkgray">선택</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span class="phone_thumb">
+										<img src="../../resources/img/content/img_phone_thumb_default.png" alt="전화번호부">
+									</span>
+									<div class="fx_lr">
+										<div class="l"><strong>강순이</strong>010-1234-5678</div>
+										<div class="r">
+											<a href="#;" class="btn btn_sm btn_round btn_outline_default"
+												onclick="openModal('alert01', this); return false;">선택</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span class="phone_thumb">
+										<img src="../../resources/img/content/img_phone_thumb_default.png" alt="전화번호부">
+									</span>
+									<div class="fx_lr">
+										<div class="l"><strong>강순이</strong>010-1234-5678</div>
+										<div class="r">
+											<a href="#;" class="btn btn_sm btn_round btn_outline_default"
+												onclick="openModal('alert01', this); return false;">선택</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span class="phone_thumb">
+										<img src="../../resources/img/content/img_phone_thumb_default.png" alt="전화번호부">
+									</span>
+									<div class="fx_lr">
+										<div class="l"><strong>강순이</strong>010-1234-5678</div>
+										<div class="r">
+											<a href="#;" class="btn btn_sm btn_round btn_darkgray">선택</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span class="phone_thumb">
+										<img src="../../resources/img/content/img_phone_thumb_default.png" alt="전화번호부">
+									</span>
+									<div class="fx_lr">
+										<div class="l"><strong>강순이</strong>010-1234-5678</div>
+										<div class="r">
+											<a href="#;" class="btn btn_sm btn_round btn_outline_default"
+												onclick="openModal('alert01', this); return false;">선택</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span class="phone_thumb">
+										<img src="../../resources/img/content/img_phone_thumb_default.png" alt="전화번호부">
+									</span>
+									<div class="fx_lr">
+										<div class="l"><strong>강순이</strong>010-1234-5678</div>
+										<div class="r">
+											<a href="#;" class="btn btn_sm btn_round btn_outline_default"
+												onclick="openModal('alert01', this); return false;">선택</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span class="phone_thumb">
+										<img src="../../resources/img/content/img_phone_thumb_default.png" alt="전화번호부">
+									</span>
+									<div class="fx_lr">
+										<div class="l"><strong>강순이</strong>010-1234-5678</div>
+										<div class="r">
+											<a href="#;" class="btn btn_sm btn_round btn_outline_default"
+												onclick="openModal('alert01', this); return false;">선택</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span class="phone_thumb">
+										<img src="../../resources/img/content/img_phone_thumb_default.png" alt="전화번호부">
+									</span>
+									<div class="fx_lr">
+										<div class="l"><strong>강순이</strong>010-1234-5678</div>
+										<div class="r">
+											<a href="#;" class="btn btn_sm btn_round btn_outline_default"
+												onclick="openModal('alert01', this); return false;">선택</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="popup_footer">
+						<div class="btn_group btn_group_flex">
+							<a href="#;" class="btn btn_lg btn_default" onclick="closeModal('phone_search')">취소</a>
+							<a href="#;" class="btn btn_lg btn_primary" onclick="closeModal('phone_search')">추가</a>
+						</div>
+					</div>
+					<button type="button" class="btn btn_close_popup">닫기</button>
+				</div>
+			</div>
+			<!-- e: 연락처에서 불러오기 -->
+
+			<!-- s: 연락처 실명확인 팝업 -->
+			<div class="modal_popup modal_alert hide" data-popup="alert01">
+				<div class="dimed"></div>
+				<div class="popup_inner" tabindex="0">
+					<div class="popup_body">
+						<div class="container">
+							<div class="txt_c txt_medium txt_black">
+								받는 분의 실명을<br>정확하게 입력해 주세요.
+							</div>
+							<div class="tf_item mt_2">
+								<div class="tf_item_body">
+									<div class="input_area">
+										<label for="alert01_inp1" class="lab">이름</label>
+										<input type="text" id="alert01_inp1" class="tf" placeholder="정확한 이름 입력" value="강순이">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popup_footer">
+						<div class="btn_group btn_group_flex">
+							<a href="#;" class="btn btn_lg btn_default" onclick="closeModal('alert01')">취소</a>
+							<a href="#;" class="btn btn_lg btn_primary" onclick="closeModal('alert01')">확인</a>
+						</div>
+					</div>
+					<button type="button" class="btn btn_close_popup">닫기</button>
+				</div>
+			</div>
+			<!-- e: 연락처 실명확인 팝업 -->
+
+			<!-- s: 이전내역에서 불러오기 팝업 -->
+			<div class="modal_popup popup hide" data-popup="layer01">
+				<div class="dimed"></div>
+				<div class="popup_inner" tabindex="0">
+					<div class="popup_header">
+						<h2 class="popup_tit">이전내역</h2>
+					</div>
+					<div class="popup_body">
+						<div class="container p_4">
+							<ul class="list spacing_mt_2">
+								<li>
+									<div class="double_box">
+										<div class="btm pb_0">
+											<div>
+												<div class="l">요청일자</div>
+												<div class="r">2021.07.19</div>
+											</div>
+											<div>
+												<div class="l">더치페이 명칭</div>
+												<div class="r">점심</div>
+											</div>
+											<div>
+												<div class="l">참여인원</div>
+												<div class="r">나봄미 외 3명</div>
+											</div>
+											<div>
+												<div class="l">전체금액</div>
+												<div class="r"><span class="txt_bold">30,433</span>원</div>
+											</div>
+										</div>
+										<div class="btn_group btn_group_flex mt_0 p_4 pt_2">
+											<a href="#;" class="btn btn_md btn_round btn_darkgray">불러오기</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="double_box">
+										<div class="btm pb_0">
+											<div>
+												<div class="l">요청일자</div>
+												<div class="r">2021.07.19</div>
+											</div>
+											<div>
+												<div class="l">더치페이 명칭</div>
+												<div class="r">점심</div>
+											</div>
+											<div>
+												<div class="l">참여인원</div>
+												<div class="r">나봄미 외 3명</div>
+											</div>
+											<div>
+												<div class="l">전체금액</div>
+												<div class="r"><span class="txt_bold">30,433</span>원</div>
+											</div>
+										</div>
+										<div class="btn_group btn_group_flex mt_0 p_4 pt_2">
+											<a href="#;" class="btn btn_md btn_round btn_darkgray">불러오기</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="double_box">
+										<div class="btm pb_0">
+											<div>
+												<div class="l">요청일자</div>
+												<div class="r">2021.07.19</div>
+											</div>
+											<div>
+												<div class="l">더치페이 명칭</div>
+												<div class="r">점심</div>
+											</div>
+											<div>
+												<div class="l">참여인원</div>
+												<div class="r">나봄미 외 3명</div>
+											</div>
+											<div>
+												<div class="l">전체금액</div>
+												<div class="r"><span class="txt_bold">30,433</span>원</div>
+											</div>
+										</div>
+										<div class="btn_group btn_group_flex mt_0 p_4 pt_2">
+											<a href="#;" class="btn btn_md btn_round btn_darkgray">불러오기</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<button type="button" class="btn btn_close_popup">닫기</button>
+				</div>
+			</div>
+			<!-- e: 이전내역에서 불러오기 팝업 -->
+
+			<!-- s: 공통 레이어 로딩 -->
+			<div class="common_layers"></div>
+			<!-- e: 공통 레이어 로딩 -->
+
+			<!-- e: 본문 -->
+		</div>
+	</div>
+</body>
+
+</html>

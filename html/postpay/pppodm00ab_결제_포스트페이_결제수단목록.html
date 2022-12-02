@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>[팝업] 현재화면명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+			var $paymentSlide = $('.payment_bottom');
+			$paymentSlide.slick({
+				draggable: true,
+				arrows: false,
+				infinite: false,
+				autoplay: false,
+				fade: false,
+				dots: false,
+				centerMode: false,
+				slidesToShow: 1
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-inc="_inc_header_postpay_type3.html" data-page-title="결제"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+			<div class="postpay">
+				<div class="container">
+					<p class="txt_lg txt_medium qr_tit3">QR코드 또는 바코드를 제시해주세요.</p>
+					<p class="qr_tit4">코드를 터치하면 확대하여 제시할 수 있어요.</p>
+					<div class="box box_qr box_qr_postpay">
+						<div class="qrcode">
+							<a href="#">
+								<img src="/resources/img/content/img_qrcode_sample.jpg" alt="QR코드">
+							</a>
+						</div>
+						<div class="barcode">
+							<a href="#">
+								<img src="/resources/img/content/img_barcode_sample.jpg" alt="바코드">
+								<div class="num">8000 8880 7109 5045 0963 0007</div>
+							</a>
+						</div>
+						<div class="txt_normal">
+							<span class="btn btn_xs btn_round btn_outline_default btn_time_limit ls0">02:00</span>
+						</div>
+						<button class="btn_refresh_postpay"><span class="sr_only">새로고침</span></button>
+					</div>
+
+					<div class="payment_wrap">
+						<button class="payment">
+							<span class="txt_medium payment_text nfc_payment_text">터치 결제</span>
+						</button>
+						<button class="payment">
+							<span class="txt_medium payment_text qr_payment_text">스캔 결제</span>
+						</button>
+					</div>
+				</div>
+
+				<div class="bottom_fixed_area payment_bottom">
+					<a href="#;" onclick="openModal('postPayBottomSheet', this); return false;" class="popup_pay pt_4 ">
+						<div class="container pay_list mb_4">
+							<span class="btn txt_light">
+								우체국 계좌(1254)<em>최근결제</em>
+							</span>
+						</div>
+					</a>
+				</div>
+
+			</div>
+			<!-- e: 본문 -->
+		</div>
+
+		<!-- s: Modal popup 바텀시트 - 결제정보 확인 -->
+		<div class="modal_popup modal_bottom_sheet hide" data-popup="postPayBottomSheet">
+			<div class="dimed"></div>
+			<div class="popup_inner popup_pay">
+				<div class="popup_header">
+					<h2 class="sr_only">결제 정보</h2>
+				</div>
+				<div class="popup_body">
+					<div class="container">
+						<div class="pay_list">
+							<button type="button" class="btn" onclick="closeModal('postPayBottomSheet');">
+								우체국 계좌(1254)<em>최근결제</em>
+							</button>
+							<button type="button" class="btn" onclick="closeModal('postPayBottomSheet');">우리은행 계좌(1243)</button>
+							<button type="button" class="btn" onclick="closeModal('postPayBottomSheet');">P-point (1243)</button>
+							<button type="button" class="btn" onclick="closeModal('postPayBottomSheet');">우체국영리한체크카드
+								(1253)</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- e: Modal popup 바텀시트 - 결제정보 확인 -->
+
+
+		<!-- s: 공통 레이어 로딩 -->
+		<div class="common_layers"></div>
+		<!-- e: 공통 레이어 로딩 -->
+	</div>
+</body>
+
+
+
+</html>

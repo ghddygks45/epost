@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+			var $postpaySlide = $('.postpay_bottom_list');
+			$postpaySlide.slick({
+				draggable: true,
+				arrows: false,
+				infinite: false,
+				autoplay: false,
+				fade: false,
+				dots: false,
+				centerMode: false,
+				slidesToShow: 4
+			});
+			$('.wrapper').css('padding-bottom', '0px');
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-inc="_inc_header_postpay.html" data-page-title="모임서비스">
+		</header>
+		<div id="content">
+			<!-- s: 본문 -->
+			<div class="postpay">
+				<div class="container">
+					<div class="meeting_intro">
+						<p class="txt_normal meeting_intro_tit">가족끼리, 친구끼리 같이 모으고 같이 쓸 수 있는 모임 회비 관리 서비스입니다.</p>
+					</div>
+				</div>
+				<!-- s: 모임이 없는 경우 -->
+				<a href="#" class="meeting_invite">
+					<p class="invite_tit txt_medium">첫번째 모임 만들기</p>
+					<p class="invite_des">모임생성하고 회원을 초대해보세요. </p>
+				</a>
+				<!-- e: 모임이 없는 경우 -->
+				<!-- s: 모임 초대 요청이 있는 경우 -->
+				<a href="#" class="meeting_invite meeting_invite_alarm">
+					<p class="invite_tit txt_medium">모임 초대 요청이 있어요.</p>
+					<p class="invite_des">초대자를 확인하고 승인해 주세요.</p>
+				</a>
+				<!-- e: 모임 초대 요청이 있는 경우 -->
+				<div class="service_area mt_6">
+					<div class="container mb_20">
+						<p class="service_tit txt_medium">모임 만들고 회비 걷고 <br><strong>똑똑한 모임 회비 관리</strong></p>
+						<ul class="service_list">
+							<li class="service_list_cont single_line">
+								<a href="#">
+									<span class="txt_medium list_tit meet">모임 만들기</span>
+								</a>
+							</li>
+							<li class="service_list_cont single_line">
+								<a href="#">
+									<span class="txt_medium list_tit dues">회비 걷기</span>
+								</a>
+							</li>
+							<li class="service_list_cont single_line">
+								<a href="#">
+									<span class="txt_medium list_tit break_dues">목표 달성 회비 깨기</span>
+								</a>
+							</li>
+							<li class="service_list_cont single_line">
+								<a href="#">
+									<span class="txt_medium list_tit conversation">회원끼리 대화하기</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bottom_fixed_area">
+					<div class="postpay_bottom">
+						<div class="container">
+							<div class="postpay_bottom_slider_area">
+								<ul class="postpay_bottom_list">
+									<li class="postpay_bottom_slider">
+										<a href="#">
+											<span class="tit purse on">전자지갑</span>
+										</a>
+									</li>
+									<li class="postpay_bottom_slider">
+										<a href="#">
+											<span class="tit calendar">금융캘린더</span>
+										</a>
+									</li>
+									<li class="postpay_bottom_slider">
+										<a href="#">
+											<span class="tit pay">결제</span>
+										</a>
+									</li>
+									<li class="postpay_bottom_slider">
+										<a href="#">
+											<span class="tit remittance">QR송금</span>
+										</a>
+									</li>
+									<li class="postpay_bottom_slider">
+										<a href="#">
+											<span class="tit event">이벤트중</span>
+										</a>
+									</li>
+									<li class="postpay_bottom_slider">
+										<a href="#">
+											<span class="tit inquiry">통합이용조회</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- s: 공통 레이어 로딩 -->
+				<div class="common_layers"></div>
+				<!-- e: 공통 레이어 로딩 -->
+			</div>
+			<!-- e: 본문 -->
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-inc="_inc_header_postpay_type6.html" data-page-title="같이 크루즈"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+			<div class="postpay bg_lightgray">
+				<div class="service_top top_style02 pt_4 pb_5">
+					<div class="container">
+						<div class="service_top_tit">
+							<div class="tit txt_medium">
+								<span class="tit_user_bg"><i class="ico ico_together"></i></span>
+								<a href="#" class="tit_link">같이크루즈</a>
+							</div>
+							<!-- s: 관리자 모드 일 때 -->
+							<div class="division manage">관리자</div>
+							<!-- e: 관리자 모드 일 때 -->
+							<!-- s: 회원 모드 일 때 -->
+							<div class="division">회원</div>
+							<!-- e: 회원 모드 일 때 -->
+						</div>
+						<div class="target mb_2">
+							<div class="target_date">
+								목표일 : <span class="num">2021.10.23</span>
+							</div>
+							<div class="target_amount txt_medium">
+								<span class="num txt_bold">58,000,000</span>원
+							</div>
+						</div>
+						<div class="btn_group">
+							<button class="btn con_btn">대화</button>
+							<!-- s: 관리자 모드 일 때 -->
+							<button class="btn rem_btn">송금</button>
+							<!-- e: 관리자 모드 일 때 -->
+							<!-- s: 회원 모드 일 때 -->
+							<button class="btn rem_btn rem_btn2">회비납부</button>
+							<!-- e: 회원 모드 일 때 -->
+						</div>
+					</div>
+				</div>
+
+				<div class="tab_area pb_16">
+					<!-- s: 탭메뉴 -->
+					<nav class="tab_menu tab_menu1 pt_6">
+						<ul class="tab_list">
+							<li class="on"><a href="#tab_cont1"><span>걷는중<span class="alarm txt_normal">1</span></span></a></li>
+							<li><a href="#tab_cont2"><span>입·출금</span></a></li>
+							<li><a href="#tab_cont3"><span>회원</span></a></li>
+						</ul>
+					</nav>
+					<!-- e: 탭메뉴 -->
+
+					<!-- s: 탭컨텐츠 -->
+					<div class="tab_cont" id="tab_cont1">
+						<h3 class="sr_only">걷는중</h3>
+						<div class="container">
+							<ul class="dues_list pt_2">
+								<li>
+									<div class="dues_tit">
+										<div class="dues_tit_left">
+											<span class="date">2021.10.05</span>
+											<span class="tit txt_medium">10월 회비</span>
+										</div>
+									</div>
+									<div class="dues_detail mt_2">
+										<span class="fee txt_medium"><span class="num txt_bold">1,000,000</span>원씩</span>
+										<span class="many txt_medium"><span class="num txt_bold">3/3</span>명 완료</span>
+									</div>
+									<div class="dues_graph dues_graph_on">
+										<div class="graph graph_bg"></div>
+										<div class="graph graph_bar"></div>
+									</div>
+								</li>
+								<li>
+									<div class="dues_tit">
+										<div class="dues_tit_left">
+											<span class="date">2021.10.15</span>
+											<span class="tit txt_medium">마지막 추가 회비</span>
+										</div>
+										<div class="dues_tit_right">
+											<a href="#" class="btn btn_sm btn_default tell">다시 알려주기</a>
+										</div>
+									</div>
+									<div class="dues_detail mt_2">
+										<span class="fee txt_medium"><span class="num txt_bold">500,000</span>원씩</span>
+										<span class="many txt_medium"><span class="num txt_bold">0/3</span>명 완료</span>
+									</div>
+									<div class="dues_graph">
+										<div class="graph graph_bg"></div>
+										<div class="graph graph_bar"></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- s: 하단 고정 영역 -->
+						<div class="bottom_fixed_area">
+							<div class="btn_group btn_group_flex">
+								<a href="#" class="btn btn_xl btn_default">입금</a>
+								<a href="#" class="btn btn_xl btn_primary">회비 걷기</a>
+							</div>
+						</div>
+						<!-- e: 하단 고정 영역 -->
+					</div>
+					<div class="tab_cont" id="tab_cont2">
+						<h3 class="sr_only">입·출금</h3>
+						<!-- 걷는중 내역 없을때 : 3월 4주차 추가 -->
+						<div class="txt_c pt_7">
+							<i class="ico ico_error02"></i>
+							<p class="d_b txt_18px mt_3 txt_normal">진행중인 회비 걷기가 없어요.</p>
+						</div>
+						<!-- 입출금 내역 없을때 : 3월 4주차 추가 -->
+						<div class="txt_c pt_7">
+							<i class="ico ico_error02"></i>
+							<p class="d_b txt_18px mt_3 txt_normal">입출금 내역이 없어요.</p>
+						</div>
+					</div>
+					<div class="tab_cont" id="tab_cont3">
+						<h3 class="sr_only">회원</h3>
+						<p>Contents3</p>
+					</div>
+					<!-- e: 탭컨텐츠 -->
+				</div>
+
+
+				<!-- s: 공통 레이어 로딩 -->
+				<div class="common_layers"></div>
+				<!-- e: 공통 레이어 로딩 -->
+
+			</div>
+			<!-- e: 본문 -->
+		</div>
+	</div>
+</body>
+
+</html>

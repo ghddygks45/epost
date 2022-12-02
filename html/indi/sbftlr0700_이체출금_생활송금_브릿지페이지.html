@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+
+
+			$(document).on('click', '[data-menu-btn]', function () {
+				var tg = $(this).data('menu-btn');
+				$(this).parent().addClass('on').siblings().removeClass('on');
+
+				$('[data-menu-content=' + tg + ']').show().siblings().hide();
+
+			})
+
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-page-title="생활송금"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+			<div class="container pt_6 pb_6">
+				<div class="txt_c">
+					<span class="d_b txt_gray txt_normal">생활속 송금서비스를 한곳에</span>
+					<strong class="txt_size35">생활송금 서비스</strong>
+				</div>
+				<ul class="br_link_list mt_8">
+					<li class="bg_remit1">
+						<a href="#;">
+							<div class="top"><strong>송금받기</strong></div>
+							<div class="btm">OOO님에게 온 더치페이 입금요청이나 전화번호 송금내역을 확인할 수 있습니다.</div>
+						</a>
+					</li>
+					<li class="bg_remit2">
+						<a href="#;">
+							<div class="top"><strong>전화번호 송금</strong></div>
+							<div class="btm">계좌번호가 아닌, 받을사람의 전화번호만 입력하면 송금할 수 있습니다.</div>
+						</a>
+					</li>
+					<li class="bg_remit3">
+						<a href="#;">
+							<div class="top"><strong>선물하기</strong></div>
+							<div class="btm">COOP을 통해 다양한 상품을 주변의 고마운 사람들에게 선물할 수 있습니다.</div>
+						</a>
+					</li>
+					<li class="bg_remit4">
+						<a href="#;">
+							<div class="top"><strong>더치페이</strong></div>
+							<div class="btm">총금액이 1/N로 금액이 계산되어 편리하게 더치페이를 할 수 있습니다.</div>
+						</a>
+					</li>
+					<li class="bg_remit5">
+						<a href="#;">
+							<div class="top"><strong>경조금 배달</strong></div>
+							<div class="btm">결혼, 축하, 조위 등 경조사별로 격식에 맞는 다양한 인사말과 함께 송금할 수 있습니다.</div>
+						</a>
+					</li>
+					<li class="bg_remit6">
+						<a href="#;">
+							<div class="top"><strong>기부금 송금</strong></div>
+							<div class="btm">사회복지 재단으로 기부금을 송금하거나, 우체국 카드 포인트를 기부할 수 있습니다. </div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- s: 공통 레이어 로딩 -->
+			<div class="common_layers"></div>
+			<!-- e: 공통 레이어 로딩 -->
+
+			<!-- e: 본문 -->
+		</div>
+	</div>
+</body>
+
+</html>

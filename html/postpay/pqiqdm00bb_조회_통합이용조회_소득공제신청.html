@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+			var $totalUseSlide = $('.swiper_box');
+			$totalUseSlide.slick({
+				arrows: true,
+				//variableWidth: true,
+				draggable: true,
+				slidesToScroll: 1,
+				infinite: false,
+				false: true,
+				fade: false,
+				dots: false,
+				speed: 500,
+				autoplay: false,
+				autoplaySpeed: 4000,
+			});
+			// 스와이프 콜백 함수
+			$('.swiper_box').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+				alert('스와이프 종료 후 콜백 이벤트');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-inc="_inc_header_postpay.html" data-page-title="통합이용조회"></header>
+		<div id="content">
+
+			<!-- s: 본문 -->
+			<div class="container p_0 pt_4">
+				<div class="swiper_box">
+
+					<!-- s: 소득공제 신청하지 않은 경우 -->
+					<div>
+						<div class="top">
+							<h2>2021.11</h2>
+						</div>
+						<div class="list_scroll p_4 pb_16">
+							<div class=" container txt_c pt_7">
+								<strong><i class="ico ico_error02"></i><span class="d_b txt_18px mt_3 txt_normal">소득공제 신청을 하지
+										않으셨어요.</span></strong>
+								<p class="txt_notice2">소득공제 신청을 한 경우 매년 1월 국세청으로 포스트페이 결제 내역을 전송하여, 연말정산 간소화 서비스에서 조회가 가능합니다.
+								</p>
+								<a href="#;" class="btn btn_md btn_outline_default btn_round mt_8"
+									onclick="openModal('layer01', this); return false;">소득공제 신청</a>
+							</div>
+						</div>
+					</div>
+					<!-- e: 소득공제 신청하지 않은 경우 -->
+					<!-- s: 소득공제 내역 -->
+					<div>
+						<div class="top">
+							<h2>2021.10</h2>
+						</div>
+						<div class="list_scroll p_4 pb_16">
+							<h3 class=" tit2 txt_normal mb_2">2021.01</h3>
+							<div class="tbl tbl_type01">
+								<table>
+									<caption class="sr_only">2021.01</caption>
+									<colgroup>
+										<col style="width: 30%;">
+										<col style="width: 30%;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">사용처</th>
+											<th scope="col">공제대상금액</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td rowspan="3" class="txt_l v_top">직불카드</td>
+											<td class="txt_l td_height pt_2 pb_0 bd_b_none">일반</td>
+											<td class="txt_r td_height pt_2 pb_0 bd_b_none">0</td>
+										</tr>
+										<tr>
+											<td class="txt_l td_height pt_0 pb_0 bd_bt_none">전통시장</td>
+											<td class="txt_r td_height pt_0 pb_0 bd_bt_none">0</td>
+										</tr>
+										<tr>
+											<td class="txt_l td_height pt_0 pb_2 bd_t_none">대중교통</td>
+											<td class="txt_r td_height pt_0 pb_2 bd_t_none">0</td>
+										</tr>
+										<tr>
+											<td class="txt_l v_top txt_medium">합계</td>
+											<td></td>
+											<td class="txt_r txt_medium">0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<h3 class="tit2 txt_normal mt_4 mb_2">2021.02</h3>
+							<div class="tbl tbl_type01">
+								<table>
+									<caption class="sr_only">2021.01</caption>
+									<colgroup>
+										<col style="width: 30%;">
+										<col style="width: 30%;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">사용처</th>
+											<th scope="col">공제대상금액</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td rowspan="3" class="txt_l v_top">직불카드</td>
+											<td class="txt_l td_height pt_2 pb_0 bd_b_none">일반</td>
+											<td class="txt_r td_height pt_2 pb_0 bd_b_none">0</td>
+										</tr>
+										<tr>
+											<td class="txt_l td_height pt_0 pb_0 bd_bt_none">전통시장</td>
+											<td class="txt_r td_height pt_0 pb_0 bd_bt_none">0</td>
+										</tr>
+										<tr>
+											<td class="txt_l td_height pt_0 pb_2 bd_t_none">대중교통</td>
+											<td class="txt_r td_height pt_0 pb_2 bd_t_none">0</td>
+										</tr>
+										<tr>
+											<td class="txt_l v_top txt_medium">합계</td>
+											<td></td>
+											<td class="txt_r txt_medium">0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<h3 class="tit2 txt_normal mt_4 mb_2">2021.03</h3>
+							<div class="tbl tbl_type01">
+								<table>
+									<caption class="sr_only">2021.01</caption>
+									<colgroup>
+										<col style="width: 30%;">
+										<col style="width: 30%;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">사용처</th>
+											<th scope="col">공제대상금액</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td rowspan="3" class="txt_l v_top">직불카드</td>
+											<td class="txt_l td_height pt_2 pb_0 bd_b_none">일반</td>
+											<td class="txt_r td_height pt_2 pb_0 bd_b_none">0</td>
+										</tr>
+										<tr>
+											<td class="txt_l td_height pt_0 pb_0 bd_bt_none">전통시장</td>
+											<td class="txt_r td_height pt_0 pb_0 bd_bt_none">0</td>
+										</tr>
+										<tr>
+											<td class="txt_l td_height pt_0 pb_2 bd_t_none">대중교통</td>
+											<td class="txt_r td_height pt_0 pb_2 bd_t_none">0</td>
+										</tr>
+										<tr>
+											<td class="txt_l v_top txt_medium">합계</td>
+											<td></td>
+											<td class="txt_r txt_medium">0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- e: 소득공제 내역 -->
+				</div>
+			</div>
+			<!-- e: 본문 -->
+
+			<!-- s: 하단 고정영역 -->
+			<div class="modal_popup modal_bottom_sheet no_dimed popup_shadow show">
+				<div class="dimed"></div>
+				<div class="popup_inner">
+					<div class="popup_body p_4 pt_5 pb_3">
+						<!-- s: 거래메모 검색 전 -->
+						<p class="txt_gray txt_12px"># 거래메모를 클릭하면 해당 메모 이용내역을 볼 수 있어요.</p>
+						<!-- e: 거래메모 검색 전 -->
+						<!-- s: 거래메모 검색 후 -->
+						<!-- <div class="reset_box">#
+							<span>계좌결제<button type="reset" class="btn btn_icon ml_1"><i class="ico ico_reset"></i><span
+										class="sr_only">삭제</span></button></span>
+							<span>출장경비<button type="reset" class="btn btn_icon ml_1"><i class="ico ico_reset"></i><span
+										class="sr_only">삭제</span></button></span>
+						</div> -->
+						<!-- e: 거래메모 검색 후 -->
+					</div>
+					<div class="popup_footer pr_0">
+						<div class="btn_group">
+							<div class="btn_group_slide">
+								<span class="check_item type_btn">
+									<input type="radio" name="btn_on" id="btn01">
+									<label for="btn01">결제</label>
+								</span>
+								<span class="check_item type_btn">
+									<input type="radio" name="btn_on" id="btn02">
+									<label for="btn02">송금</label>
+								</span>
+								<span class="check_item type_btn">
+									<input type="radio" name="btn_on" id="btn03">
+									<label for="btn03">모임</label>
+								</span>
+								<span class="check_item type_btn">
+									<input type="radio" name="btn_on" id="btn04">
+									<label for="btn04">더치페이</label>
+								</span>
+								<span class="check_item type_btn">
+									<input type="radio" name="btn_on" id="btn05">
+									<label for="btn05">제로페이</label>
+								</span>
+								<span class="check_item type_btn">
+									<input type="radio" name="btn_on" id="btn06">
+									<label for="btn06">교통카드</label>
+								</span>
+								<span class="check_item type_btn">
+									<input type="radio" name="btn_on" id="btn07" checked>
+									<label for="btn07">소득공제</label>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- e: 하단 고정영역 -->
+
+			<!-- s: 주민등록번호 뒷자리 입력 팝업 -->
+			<div class="modal_popup modal_bottom_sheet show" data-popup="layer01">
+				<div class="dimed"></div>
+				<div class="popup_inner">
+					<div class="popup_header">
+						<h2 class="popup_tit">소득공제 신청</h2>
+						<button type="button" class="btn btn_close_popup">닫기</button>
+					</div>
+					<div class="popup_body">
+						<div class="container pt_3">
+							<strong class="txt_xl d_b txt_c">주민등록번호 뒷자리를 입력해주세요.</strong>
+							<div class="tf_item mt_3 btm_sheet_pwd">
+								<div class="tf_item_body">
+									<div class="input_area pt_0">
+										<div class="password_masking2 active">
+											<i></i>
+											<i class="bg_gray"></i>
+											<i class="bg_gray"></i>
+											<i class="bg_gray"></i>
+											<i class="bg_gray"></i>
+											<i class="bg_gray"></i>
+											<i class="bg_gray"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 마크업 수정 : 2022-02-03 -->
+					<div class="popup_footer keypad">
+						<div class="btn_group btn_group_flex pb_3">
+							<button type="button" class="btn btn_lg btn_outline_default txt_medium"
+								onclick="closeModal('layer01');">취소</button>
+							<button type="button" class="btn btn_lg btn_primary txt_medium" onclick="closeModal('layer01');">소득공제
+								신청</button>
+						</div>
+						<!-- s: 보안 숫자 키패드 -->
+						<div class="number_keypad security_number pb_4">
+							<ul>
+								<li><button type="button">1</button></li>
+								<li class="post_logo"><span class="sr_only">우체국 로고</span></li>
+								<li><button type="button">2</button></li>
+								<li><button type="button">3</button></li>
+								<li><button type="button">4</button></li>
+								<li><button type="button">5</button></li>
+								<li class="post_logo"><span class="sr_only">우체국 로고</span></li>
+								<li><button type="button">6</button></li>
+								<li><button type="button">7</button></li>
+								<li><button type="button">8</button></li>
+								<li><button type="button">9</button></li>
+								<li><button type="button">0</button></li>
+								<li><button type="button" class="remove_number"><span class="sr_only">삭제</span></button></li>
+								<li><button type="button" class="txt_key">취소</button></li>
+								<li><button type="button" class="txt_key">입력완료</button></li>
+							</ul>
+						</div>
+						<!-- e: 보안 숫자 키패드 -->
+					</div>
+				</div>
+			</div>
+			<!-- e: 주민등록번호 뒷자리 입력 팝업 -->
+
+			<!-- s: 공통 레이어 로딩 -->
+			<div class="common_layers"></div>
+			<!-- e: 공통 레이어 로딩 -->
+
+		</div>
+	</div>
+</body>
+
+</html>

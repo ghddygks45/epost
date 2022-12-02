@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>[팝업] 현재화면명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+			$('.btn_toggle_group .btn').click(function () {
+				$(this).addClass('active').siblings().removeClass('active');
+			})
+		});
+	</script>
+</head>
+
+<!-- s: 소비 통계 설정 -->
+
+<body class="popup">
+	<div class="popup_inner">
+		<div class="popup_header">
+			<h1 class="popup_tit txt_s18">소비 통계 설정 <span class="link_arrow"><a href="#;">소비통계</a></span></h1>
+		</div>
+		<div class="popup_body">
+
+			<div class="container pt_3 pb_4">
+
+				<div class="section mt_0 pb_7">
+					<h2 class="tit1 mb_2">고정수입</h2>
+					<div class="tag_group">
+						<ul class="tag_list">
+							<li><span class="tag_blue">작업실</span></li>
+							<li><span class="tag_blue">엄마용돈</span></li>
+							<li><span class="tag_blue">병원</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section mt_0 pb_7">
+					<h2 class="tit1 mb_2">고정지출</h2>
+					<div class="tag_group">
+						<ul class="tag_list">
+							<li><span>프로젝트</span></li>
+							<li><span>작업실월세</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section mt_0 pb_7">
+					<h2 class="tit1 mb_2">소비 제외</h2>
+					<div class="tag_group">
+						<ul class="tag_list">
+							<li><span class="tag_gray">홍길동</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="cons_inner bdr_t_type02 mt_1">
+					<p class="bul_notice txt_gray">결제, 입출금 내역을 검색하여 고정수입/고정지출/소비 제외 설정을 할 수 있어요.
+					</p>
+					<ul class="fn_list mt_4">
+						<li>
+							<div class="flex_con_group">
+								<span>
+									<span class="box_round">
+										<i class="ico ico_fn_card"></i>
+									</span>
+									<span>
+										<em>사라약국</em>
+										<small class="tag">병원</small>
+									</span>
+								</span>
+								<span class="right">
+									<span class="price">
+										<strong>8,410</strong>
+										원
+									</span>
+									<span class="btn_toggle_group">
+										<button type="button" class="btn btn_sm btn_outline_default">제외</button>
+										<button type="button" class="btn btn_sm btn_outline_default active">고정</button>
+									</span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="flex_con_group">
+								<span>
+									<span class="box_round">
+										<i class="ico ico_fn_card"></i>
+									</span>
+									<span>
+										<em>자작나무</em>
+										<small class="tag">회식</small>
+									</span>
+								</span>
+								<span class="right">
+									<span class="price">
+										<strong>8,410</strong>
+										원
+									</span>
+									<span class="btn_toggle_group">
+										<button type="button" class="btn btn_sm btn_outline_default">제외</button>
+										<button type="button" class="btn btn_sm btn_outline_default active">고정</button>
+									</span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="flex_con_group">
+								<span>
+									<span class="box_round">
+										<i class="ico ico_fn_card"></i>
+									</span>
+									<span>
+										<em>홍길동</em>
+										<small class="tag">내계좌</small>
+									</span>
+								</span>
+								<span class="right">
+									<span class="price">
+										<strong>8,410</strong>
+										원
+									</span>
+									<span class="btn_toggle_group">
+										<button type="button" class="btn btn_sm btn_outline_default">제외</button>
+										<button type="button" class="btn btn_sm btn_outline_default active">고정</button>
+									</span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="flex_con_group">
+								<span>
+									<span class="box_round">
+										<i class="ico ico_fn_card"></i>
+									</span>
+									<span>
+										<em>사라약국</em>
+										<small class="tag">작업실월세</small>
+									</span>
+								</span>
+								<span class="right">
+									<span class="price">
+										<strong>8,410</strong>
+										원
+									</span>
+									<span class="btn_toggle_group">
+										<button type="button" class="btn btn_sm btn_outline_default">제외</button>
+										<button type="button" class="btn btn_sm btn_outline_default active">고정</button>
+									</span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="flex_con_group">
+								<span>
+									<span class="box_round">
+										<i class="ico ico_fn_card"></i>
+									</span>
+									<span>
+										<em>사라약국</em>
+										<small class="tag">작업실월세</small>
+									</span>
+								</span>
+								<span class="right">
+									<span class="price">
+										<strong>8,410</strong>
+										원
+									</span>
+									<span class="btn_toggle_group">
+										<!-- <button type="button" class="btn btn_sm btn_outline_default">제외</button>
+										<button type="button" class="btn btn_sm btn_outline_default active">고정</button> -->
+									</span>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- s: 하단 고정 영역 -->
+		<div class="bottom_fixed_area">
+			<div class="bottom_search_area">
+				<div class="tf_item mt_0">
+					<div class="tf_item_body">
+						<div class="input_area">
+							<a href="#;" class="opt" title="전체" onclick="openModal('layerOption');">전체</a>
+							<input type="text" class="tf" title="검색 입력" placeholder="적요, 메모 검색">
+						</div>
+						<div class="btn_area">
+							<a href="#;" class="btn_search">
+								<span class="sr_only">검색</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- e: 하단 고정 영역 -->
+	</div>
+	<!-- e: 소비 통계 설정 -->
+
+	<!-- s: 공통 레이어 로딩 -->
+	<div class="common_layers"></div>
+	<!-- e: 공통 레이어 로딩 -->
+	<button type="button" class="btn btn_close_popup" onclick="closeWindow();">닫기</button>
+</body>
+
+</html>

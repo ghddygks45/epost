@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>[팝업] 현재화면명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-inc="_inc_header_postpay_type3.html" data-page-title="
+		새 경조금 배달">
+		</header>
+		<div id="content">
+
+			<!-- s: 본문 -->
+			<div class="postpay delivery container pb_4 ">
+
+				<div class="timer_wrap">
+					<p class="bul_notice timer">4시간 54분 15초 내 신청 시
+						<span class="arrive">10/16일 오후 8시 전 도착</span>
+					</p>
+				</div>
+
+				<h3 class="tit1 mt_2 mb_0">보내는 분 주소 입력</h3>
+
+				<div class="form_wrap mt_2">
+
+					<!-- s: 이름 -->
+					<div class="tf_item">
+						<div class="tf_item_body">
+							<div class="input_area">
+								<label class="lab" for="lb_name">보내는 분 이름 <span class="req">필수항목</span></label>
+								<input type="text" id="lb_name" class="tf" value="김가을" title="보내는 분 이름 입력" required>
+							</div>
+						</div>
+					</div>
+					<!-- e: 이름 -->
+
+					<!-- s: 주소 -->
+					<div class="tf_item mt_2">
+						<div class="tf_item_body">
+							<div class="input_area">
+								<label class="lab" for="lb_address2">보내는 분 주소 <span class="req">필수항목</span></label>
+								<input type="text" class="tf" id="lb_address2" value="58217" title="우편번호 입력" required>
+							</div>
+							<div class="btn_area">
+								<a href="#;" class="btn btn_md btn_round btn_darkgray">우편번호</a>
+							</div>
+						</div>
+						<div class="tf_item_footer txt_normal">
+							<p>전라남도 나주시 상야 3길8</p>
+							<p>A동 626호(빛가람동, 중흥s클래스메가티움 2차)</p>
+						</div>
+					</div>
+					<!-- e: 주소 -->
+
+					<!-- s: 연락처 -->
+					<div class="tf_item mt_2">
+						<div class="tf_item_body">
+							<div class="input_area">
+								<label class="lab" for="lb_phone">보내는 분 연락처 <span class="req">필수항목</span></label>
+								<input type="text" id="lb_phone" class="tf ls0" value="010-7777-1234" title="보내는 분 연락처 입력" required>
+							</div>
+						</div>
+					</div>
+					<!-- e: 연락처 -->
+
+					<!-- s: 수신여부 -->
+					<div class="input_items mt_2">
+						<span class="check_item type_btn two_line">
+							<input type="radio" name="lb_period" id="lb_period_1" checked>
+							<label for="lb_period_1"><i class="ico ico_check_on"></i> 배달결과 <br>SMS 수신</label>
+						</span>
+						<span class="check_item type_btn two_line">
+							<input type="radio" name="lb_period" id="lb_period_2">
+							<label for="lb_period_2"><i class="ico ico_check_off"></i> 배달결과 <br>SMS 미수신</label>
+						</span>
+					</div>
+					<!-- e: 수신여부 -->
+
+				</div>
+
+				<!-- s: 하단 고정 영역 -->
+				<div class="bottom_fixed_area p_4">
+					<div class="btn_group btn_group_flex">
+						<a href="#" class="btn btn_lg btn_primary">
+							<span>다음</span>
+						</a>
+					</div>
+				</div>
+				<!-- e: 하단 고정 영역 -->
+
+			</div>
+			<!-- e: 본문 -->
+
+			<!-- s: 공통 레이어 로딩 -->
+			<div class="common_layers"></div>
+			<!-- e: 공통 레이어 로딩 -->
+
+		</div>
+	</div>
+</body>
+
+</html>

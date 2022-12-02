@@ -1,0 +1,89 @@
+.bg_txt.utility_bg05 {
+	background-image: url(/resources/img/content/utility_bg05.png);
+}
+
+.bg_txt.utility_bg07 {
+	background-image: url(/resources/img/content/utility_bg07.png);
+}
+
+.financial_certificate_area {
+	padding-top: 50px;
+
+	.waiting_msg_box {
+		padding-top: 100px;
+		background: url(/resources/img/content/img_financial_certificate.png) no-repeat top 0 left 50%/85px;
+		font-size: 20px;
+
+	}
+
+	.bullet_box {
+		border-radius: 8px;
+		padding: 25px 20px;
+		background: rgba(253, 198, 28, .2);
+
+		&>li {
+			padding: 10px 0 11px 65px;
+			background-repeat: no-repeat;
+			background-position: center left 0;
+			background-size: 50px;
+		}
+
+		&>li:nth-child(1) {
+			background-image: url(/resources/img/content/ico_cloud.png);
+		}
+
+		&>li:nth-child(2) {
+			background-image: url(/resources/img/content/ico_pinnumber.png);
+		}
+
+		&>li:nth-child(3) {
+			background-image: url(/resources/img/content/ico_periodcart.png);
+		}
+	}
+}
+
+// 비밀번호 i background 수정
+.password_masking {
+	i {
+		background-color: #ddd
+	}
+}
+
+// 순서변경 img 수정
+.btn {
+	&.btn_orderchange {
+		border: 0;
+		width: 50px;
+		height: 50px;
+		background-size: 20px 20px;
+		-webkit-tap-highlight-color: transparent;
+
+		&.top {
+			background-image: url(/resources/img/common/bg_orderchange_top.png);
+			background-position: right 0 bottom 0;
+		}
+
+		&.btm {
+			background-image: url(/resources/img/common/bg_orderchange_btm.png);
+			background-position: right 0 top 0;
+		}
+	}
+}
+
+.stats_wrap {
+	margin: 5px 0 20px 0;
+	font-size: 16px;
+	text-align: center;
+
+	&.increase {
+		span {
+			color: #ff7d7c;
+		}
+	}
+
+	&.decrease {
+		span {
+			color: #679bd5;
+		}
+	}
+}

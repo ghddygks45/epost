@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+			var $dutchSlide = $('.service_list_area');
+			$dutchSlide.slick({
+				draggable: true,
+				arrows: false,
+				infinite: true,
+				autoplay: false,
+				fade: false,
+				dots: true,
+				centerMode: true,
+				centerPadding: '20px',
+				slidesToShow: 1,
+				dotsClass: "slick-dots",
+				swipe: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-inc="_inc_header_postpay_type3.html" data-page-title="더치페이"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+			<div class="postpay bg_lightgray">
+
+				<div class="service_top pt_4 pb_11">
+					<div class="dutch_tit">
+						<p>결제한 내역 등을 지정하여<br>친구들과 나눠내기 정산을 할 수 있어요.</p>
+					</div>
+					<div class="service_slider_area">
+						<ul class="service_list_area">
+							<li class="service_slider">
+								<div class="tit">
+									<div class="l">
+										<span class="sr_only">승인일시</span>
+										<span class="date">2021.9.11 14:25</span>
+										<span class="sr_only">적요</span>
+										<span class="name txt_medium">9월10일 뒷풀이</span>
+									</div>
+									<div class="r">
+										<!-- s: 납부 해야 할 때-->
+										<a href="#" class="btn btn_sm pay" onclick="openModal('postPayWallet01', this); return false;">납부</a>
+										<!-- e: 납부 해야 할 때 -->
+										<!-- s: 납부완료 하였을 때-->
+										<span class="btn btn_sm pay pay_end">납부완료</span>
+										<!-- e: 납부완료 하였을 때 -->
+									</div>
+								</div>
+								<div class="detail mt_2">
+									<span class="sr_only">금액</span>
+									<span class="fee txt_medium ls0"><span class="num txt_bold">200,000</span>원</span>
+									<span class="sr_only">명수</span>
+									<span class="many txt_medium"><span class="num txt_bold">4/5</span>명</span>
+								</div>
+								<div class="graph_area">
+									<div class="graph graph_bg"></div>
+									<div class="graph graph_bar"></div>
+								</div>
+							</li>
+							<li class="service_slider">
+								<div class="tit">
+									<div class="l">
+										<span class="sr_only">승인일시</span>
+										<span class="date">2021.9.11 14:25</span>
+										<span class="sr_only">적요</span>
+										<span class="name txt_medium">9월10일 뒷풀이</span>
+									</div>
+									<div class="r">
+										<!-- s: 납부 해야 할 때-->
+										<a href="#" class="btn btn_sm pay" onclick="openModal('postPayWallet01', this); return false;">납부</a>
+										<!-- e: 납부 해야 할 때 -->
+										<!-- s: 납부완료 하였을 때-->
+										<span class="btn btn_sm pay pay_end">납부완료</span>
+										<!-- e: 납부완료 하였을 때 -->
+									</div>
+								</div>
+								<div class="detail mt_2">
+									<span class="sr_only">금액</span>
+									<span class="fee txt_medium ls0"><span class="num txt_bold">200,000</span>원</span>
+									<span class="sr_only">명수</span>
+									<span class="many txt_medium"><span class="num txt_bold">4/5</span>명</span>
+								</div>
+								<div class="graph_area">
+									<div class="graph graph_bg"></div>
+									<div class="graph graph_bar"></div>
+								</div>
+							</li>
+							<li class="service_slider">
+								<div class="tit">
+									<div class="l">
+										<span class="sr_only">승인일시</span>
+										<span class="date">2021.9.11 14:25</span>
+										<span class="sr_only">적요</span>
+										<span class="name txt_medium">9월10일 뒷풀이</span>
+									</div>
+									<div class="r">
+										<!-- s: 납부 해야 할 때-->
+										<a href="#" class="btn btn_sm pay" onclick="openModal('postPayWallet01', this); return false;">납부</a>
+										<!-- e: 납부 해야 할 때 -->
+										<!-- s: 납부완료 하였을 때-->
+										<span class="btn btn_sm pay pay_end">납부완료</span>
+										<!-- e: 납부완료 하였을 때 -->
+									</div>
+								</div>
+								<div class="detail mt_2">
+									<span class="sr_only">금액</span>
+									<span class="fee txt_medium ls0"><span class="num txt_bold">200,000</span>원</span>
+									<span class="sr_only">명수</span>
+									<span class="many txt_medium"><span class="num txt_bold">4/5</span>명</span>
+								</div>
+								<div class="graph_area">
+									<div class="graph graph_bg"></div>
+									<div class="graph graph_bar"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tab_area pb_4 pt_6">
+					<!-- s: 탭메뉴 -->
+					<nav class="tab_menu tab_menu1">
+						<ul class="tab_list">
+							<li class="on"><a href="#tab_cont1"><span>완료<span class="alarm txt_normal">2</span></span></a></li>
+							<li><a href="#tab_cont2"><span>멤버</span></a></li>
+						</ul>
+					</nav>
+					<!-- e: 탭메뉴 -->
+
+					<!-- s: 탭컨텐츠 -->
+					<div class="tab_cont" id="tab_cont1">
+						<h3 class="sr_only">완료</h3>
+						<div class="container">
+							<ul class="organize_list pt_2">
+								<li>
+									<div class="tit">
+										<div class="l">
+											<span class="sr_only">승인일시</span>
+											<span class="date ls0">2021.9.10 14:25</span>
+											<span class="sr_only">적요</span>
+											<span class="name txt_medium">9월10일 점심</span>
+										</div>
+										<div class="r">
+											<span class="sr_only">금액</span>
+											<span class="fee txt_medium ls0"><span class="num txt_bold">50,000</span>원</span>
+										</div>
+									</div>
+									<div class="detail">
+										<div class="l">
+											<a href="#" class="btn btn_sm btn_outline_default">상세</a>
+											<a href="#" class="btn btn_sm btn_outline_default"
+												onclick="openModal('copyBottomSheet', this); return false;">복사</a>
+										</div>
+										<div class="r">
+											<span class="sr_only">멤버이름</span>
+											<span class="member">감감</span>
+											<span class="member">배동</span>
+											<span class="member">공식</span>
+											<span class="member">심심</span>
+											<span class="member">고동</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<div class="l">
+											<span class="sr_only">승인일시</span>
+											<span class="date ls0">2021.9.10 14:25</span>
+											<span class="sr_only">적요</span>
+											<span class="name txt_medium">9월10일 점심</span>
+										</div>
+										<div class="r">
+											<span class="sr_only">금액</span>
+											<span class="fee txt_medium ls0"><span class="num txt_bold">50,000</span>원</span>
+										</div>
+									</div>
+									<div class="detail">
+										<div class="l">
+											<a href="#" class="btn btn_sm btn_outline_default">상세</a>
+											<a href="#" class="btn btn_sm btn_outline_default"
+												onclick="openModal('copyBottomSheet', this); return false;">복사</a>
+										</div>
+										<div class="r">
+											<span class="sr_only">멤버이름</span>
+											<span class="member">감감</span>
+											<span class="member">배동</span>
+											<span class="member">공식</span>
+											<span class="member">심심</span>
+											<span class="member">고동</span>
+										</div>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="tab_cont" id="tab_cont2">
+						<h3 class="sr_only">멤버</h3>
+					</div>
+					<!-- e: 탭컨텐츠 -->
+				</div>
+
+				<!-- s: 하단 고정 영역 -->
+				<div class="bottom_fixed_area">
+					<div class="btn_group btn_group_flex">
+						<a href="#" class="btn btn_xl btn_default">멤버관리</a>
+						<a href="#" class="btn btn_xl btn_primary">새 더치페이</a>
+					</div>
+				</div>
+				<!-- e: 하단 고정 영역 -->
+
+				<!-- s: 납부 팝업 바텀시트 -->
+				<div class="modal_popup modal_bottom_sheet hide" data-popup="postPayWallet01">
+					<div class="dimed"></div>
+					<div class="popup_inner pt_4 pb_3">
+						<div class="popup_body pb_0">
+							<div class="postpay">
+								<div class="postpay_bottom_popup">
+									<div class="container">
+
+										<div class="d_flex pop_header">
+											<p>송금한도 일 <span>3,000,000</span>원</p>
+											<p class="txt_normal">수수료 무료</p>
+										</div>
+
+										<!-- s: 계좌 선택 -->
+										<a href="#;" class="tf_item mt_2" onclick="openModal('layerOption', this); return false;">
+											<div class="tf_item_body">
+												<div class="input_area">
+													<p class="pay_info txt_normal">우체국(123456789)</p>
+													<p class="pay_info txt_normal">210,000원</p>
+												</div>
+												<div class="btn_area">
+													<i class="ico ico_chevron_down_md"></i>
+													<span class="sr_only">계좌 선택</span>
+												</div>
+											</div>
+										</a>
+										<!-- e: 계좌 선택 -->
+
+										<!-- s: 보안 키패드 영역 -->
+										<div class="txt_c mt_4">키패드 영역</div>
+										<!-- e: 보안 키패드 영역 -->
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 납부 팝업 바텀시트 -->
+
+				<!-- s: 복사 팝업 바텀시트 -->
+				<div class="modal_popup modal_bottom_sheet" data-popup="copyBottomSheet">
+					<div class="dimed"></div>
+					<div class="popup_inner">
+						<div class="popup_header">
+							<h2 class="popup_tit"></h2>
+						</div>
+						<div class="popup_body">
+							<div class="container">
+								<p class="copy_tit txt_c txt_medium txt_lg pb_3">동일한 조건으로 새더치페이가 만들어져요.</p>
+								<p class="copy_des txt_gray pb_3">복사된 더치페이에서 더치페이명, 금액 등만 부분 수정하여 빠르게 더치페이 요청할 수 있어요.</p>
+							</div>
+						</div>
+						<div class="popup_footer">
+							<div class="btn_group btn_group_flex">
+								<button type="button" class="btn btn_lg btn_outline_default"
+									onclick="closeModal('layerSampleFull');">취소</button>
+								<button type="button" class="btn btn_lg btn_primary" onclick="closeModal('layerSampleFull');">더치페이 복사
+									생성</button>
+							</div>
+						</div>
+						<button type="button" class="btn btn_close_popup">닫기</button>
+					</div>
+				</div>
+				<!-- e: 복사 팝업 바텀시트 -->
+
+				<!-- s: 공통 레이어 로딩 -->
+				<div class="common_layers"></div>
+				<!-- e: 공통 레이어 로딩 -->
+
+			</div>
+			<!-- e: 본문 -->
+		</div>
+	</div>
+</body>
+
+</html>

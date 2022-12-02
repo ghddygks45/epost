@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+			//
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-inc="_inc_header_mobileweb.html" data-page-title="비대면 계좌 개설"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+			<div class="container p_4 pb_20">
+				<div class="btn_group ">
+					<a href="#;" class="btn btn_md btn_primary" onclick="openModal('layer01', this); return false;">계좌비밀번호입력</a>
+				</div>
+			</div>
+
+			<!-- s: 계좌비밀번호입력 bottom sheet -->
+			<div class="modal_popup modal_bottom_sheet show" data-popup="layer01">
+				<div class="dimed"></div>
+				<div class="popup_inner" style="height:calc(100% - 50px);">
+					<div class="popup_header"></div>
+					<div class="popup_body">
+						<div class="container">
+							<strong class="txt_xl d_b txt_c">계좌 비밀번호를 입력해주세요.</strong>
+							<!-- 비밀번호 재입력 -->
+							<!-- <strong class="txt_xl d_b txt_c">계좌 비밀번호를 다시 입력해주세요.</strong> -->
+							<div class="tf_item mt_3 btm_sheet_pwd">
+								<div class="tf_item_body">
+									<div class="input_area pt_0">
+										<div class="password_masking active">
+											<i></i><i class="bg_gray"></i><i class="bg_gray"></i><i class="bg_gray"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="txt_sm txt_c mt_4 txt_gray">
+								<!-- 비밀번호 재입력 -->
+								<span class="txt_red d_b txt_normal">재입력 비밀번호가 일치하지 않습니다.
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="popup_footer keypad">
+						<!-- s: 보안 키패드 영역 -->
+						<div class="txt_c">키패드 영역</div>
+						<!-- e: 보안 키패드 영역 -->
+					</div>
+					<button type="button" class="btn btn_close_popup">닫기</button>
+				</div>
+			</div>
+			<!-- e: 계좌비밀번호입력 bottom sheet -->
+
+			<!-- s: 공통 레이어 로딩 -->
+			<div class="common_layers"></div>
+			<!-- e: 공통 레이어 로딩 -->
+
+			<!-- e: 본문 -->
+		</div>
+	</div>
+</body>
+
+</html>

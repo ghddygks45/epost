@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>현재화면명 | 메뉴명 | 사이트명</title>
+	<link rel="stylesheet" href="/resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="/resources/js/jquery-3.3.1.js"></script>
+	<script src="/resources/js/jquery-ui.js"></script>
+	<script src="/resources/js/slick.js"></script>
+
+	<!-- TODO : 기능과 무관한 UI 레이아웃 관련 스크립트 (필수 코드, 삭제 금지) -->
+	<script src="/resources/js/ui_global.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅용 JS -->
+	<script src="/resources/js/ui_layout_setting.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		$(document).ready(function () {
+
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-inc="_inc_header_main.html" data-page-title="우체국 스마트뱅킹"></header>
+		<div id="content">
+			<!-- s: 본문 -->
+			<h2 class="sr_only">메인 홈</h2>
+
+			<!-- s: 계좌 정보 : 홈 -->
+			<div class="acc_info_area acc_info_area_home theme_light">
+				<div class="bg"></div>
+				<div class="acc_box">
+					<div class="acc_box_header">
+						<div class="info">
+							<h3 class="tit">스마트e-Postbank예금</h3>
+							<p class="acc_num">100081-02-024210</p>
+						</div>
+						<div class="toolbar">
+							<span class="check_switch check_switch_sm check_quick_transfer">
+								<input type="checkbox" id="chk_fast1">
+								<label for="chk_fast1">빠른이체</label>
+							</span>
+							<a href="#;" class="pl_1 ml_1" onclick="accountSettingView(this); return false;">
+								<i class="ico ico_submenu"></i>
+								<span class="sr_only">계좌관리</span>
+							</a>
+						</div>
+					</div>
+					<div class="acc_box_body">
+						<div class="inner">
+							<div class="balance_area">
+								<strong class="balance_num">75,678,900</strong><span class="txt_xl">원</span>
+							</div>
+							<div class="add_quick">
+								<!-- s: 빠른이체 없을 때 -->
+								<span class="btn btn_outline_gray btn_sm btn_round">등록된 빠른이체가 없습니다</span>
+								<!-- e: 빠른이체 없을 때 -->
+
+								<!-- s: 빠른이체 있을 때 -->
+								<!-- 
+								<a href="#;" class="btn btn_outline_gray btn_sm btn_round"
+									onclick="openModal('layerQuickTransfer1', this); return false;">김직원</a>
+								<a href="#;" class="btn btn_outline_gray btn_sm btn_round"
+									onclick="openModal('layerQuickTransfer1', this); return false;">이모모</a> 
+								-->
+								<!-- e: 빠른이체 있을 때 -->
+
+								<a href="#;" class="btn btn_icon ml_1">
+									<i class="ico ico_plus_circle"></i>
+									<span class="sr_only">빠른이체 추가</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="acc_box_footer">
+						<div class="btn_area">
+							<a href="#;" class="btn">거래내역</a>
+							<a href="#;" class="btn">즉시이체</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- e: 계좌 정보 : 홈 -->
+
+			<!-- s: 계좌 정보 : 예금 -->
+			<div class="acc_info_area acc_info_area_deposit">
+				<div class="bg"></div>
+				<div class="acc_box">
+					<div class="acc_box_header">
+						<div class="info">
+							<h3 class="tit">일반저축예금</h3>
+							<p class="acc_num">100081-02-024210</p>
+						</div>
+						<div class="toolbar">
+							<span class="check_switch check_switch_sm check_quick_transfer">
+								<input type="checkbox" id="chk_fast2" checked>
+								<label for="chk_fast2">빠른이체</label>
+							</span>
+							<a href="#;" class="pl_1 ml_1" onclick="accountSettingView(this); return false;">
+								<i class="ico ico_submenu"></i>
+								<span class="sr_only">계좌관리</span>
+							</a>
+						</div>
+					</div>
+					<div class="acc_box_body">
+						<div class="inner">
+							<div class="balance_area">
+								<strong class="balance_num">75,678,900</strong><span class="txt_xl">원</span>
+							</div>
+							<div class="add_quick">
+								<!-- s: 빠른이체 없을 때 -->
+								<!-- <span class="btn btn_outline_gray btn_sm btn_round">등록된 빠른이체가 없습니다</span> -->
+								<!-- e: 빠른이체 없을 때 -->
+
+								<!-- s: 빠른이체 있을 때 -->
+								<a href="#;" class="btn btn_outline_gray btn_sm btn_round"
+									onclick="openModal('layerQuickTransfer1', this); return false;">김직원</a>
+								<a href="#;" class="btn btn_outline_gray btn_sm btn_round"
+									onclick="openModal('layerQuickTransfer1', this); return false;">이모모</a>
+								<!-- e: 빠른이체 있을 때 -->
+
+								<a href="#;" class="btn btn_icon ml_1">
+									<i class="ico ico_plus_circle"></i>
+									<span class="sr_only">빠른이체 추가</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="acc_box_footer">
+						<div class="btn_area">
+							<a href="#;" class="btn">거래내역</a>
+							<a href="#;" class="btn">즉시이체</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- e: 계좌 정보 : 예금 -->
+
+			<!-- s: 계좌 정보 : 카드 -->
+			<div class="acc_info_area acc_info_area_card">
+				<div class="bg"></div>
+				<div class="acc_box">
+					<div class="acc_box_header">
+						<div class="info">
+							<h3 class="tit">우체국 多Dream 체크카드</h3>
+							<p class="acc_num">9440-****-****-1123</p>
+						</div>
+						<div class="toolbar">
+							<a href="#;" class="pl_1 ml_1">
+								<i class="ico ico_submenu"></i>
+								<span class="sr_only">카드관리</span>
+							</a>
+						</div>
+					</div>
+					<div class="acc_box_body">
+						<div class="inner">
+							<p class="mb_2">8월 카드 사용 금액</p>
+							<div class="balance_area">
+								<strong class="balance_num">75,678,900</strong><span class="txt_xl">원</span>
+							</div>
+						</div>
+					</div>
+					<div class="acc_box_footer">
+						<div class="btn_area">
+							<a href="#;" class="btn">거래내역</a>
+							<a href="#;" class="btn">즉시이체</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- e: 계좌 정보 : 카드 -->
+
+			<!-- s: 계좌 정보 : 펀드 -->
+			<div class="acc_info_area acc_info_area_fund">
+				<div class="bg"></div>
+				<div class="acc_box">
+					<div class="acc_box_header">
+						<div class="info">
+							<p class="acc_num">100081-02-024210</p>
+							<h3 class="tit">한국투자크레딧포커스ESG증권자투자신탁1호(채권)Ce</h3>
+						</div>
+						<div class="toolbar">
+							<a href="#;" class="pl_1 ml_1">
+								<i class="ico ico_submenu"></i>
+								<span class="sr_only">펀드관리</span>
+							</a>
+						</div>
+					</div>
+					<div class="acc_box_body box_round">
+						<div class="inner">
+							<div class="balance_area">
+								<strong class="balance_num">75,678,900</strong><span class="txt_xl">원</span>
+							</div>
+							<div class="mt_3">
+								<p class="point_updown">
+									<i class="ico ico_point_down"></i>
+									<span class="txt_down">4,749원</span>
+									<span class="sr_only">하락</span>
+								</p>
+								<!-- <p class="point_updown">
+									<i class="ico ico_point_up"></i>
+									<span class="txt_up">4,749원</span>
+									<span class="sr_only">상승</span>
+								</p> -->
+								<dl class="invest_principal">
+									<dt>투자원금</dt>
+									<dd>3,233,127원</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<div class="acc_box_footer">
+						<div class="btn_area">
+							<a href="#;" class="btn">환매신청</a>
+							<a href="#;" class="btn">추가매수</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- e: 계좌 정보 : 펀드 -->
+
+			<!-- s: 계좌 정보 : 오픈뱅킹 -->
+			<div class="acc_info_area acc_info_area_openbanking">
+				<div class="bg"></div>
+				<div class="acc_box">
+					<div class="acc_box_header">
+						<div class="info">
+							<div class="emblem">
+								<img src="/resources/img/common/ico_bank_ibk_sm.png" alt="">
+							</div>
+							<h3 class="tit">IBK 입출금 통장</h3>
+							<p class="acc_num">100081-02-024210</p>
+						</div>
+						<div class="toolbar">
+							<a href="#;" class="pl_1 ml_1" onclick="accountSettingView(this); return false;">
+								<i class="ico ico_submenu"></i>
+								<span class="sr_only">계좌관리</span>
+							</a>
+						</div>
+					</div>
+					<div class="acc_box_body">
+						<div class="inner">
+							<div class="balance_area">
+								<div class="before">
+									<button type="button" class="btn btn_acc_view" onclick="$(this).parent().hide().next().show();">
+										<span class="txt_xl txt_medium">잔액조회</span>
+										<i class="ico ico_refresh_white ml_2"></i>
+									</button>
+								</div>
+								<div class="result" style="display: none;">
+									<strong class="balance_num">75,678,900</strong><span class="txt_xl">원</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="acc_box_footer">
+						<div class="btn_area">
+							<a href="#;" class="btn">거래내역</a>
+							<a href="#;" class="btn">보내기</a>
+							<a href="#;" class="btn">가져오기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- e: 계좌 정보 : 오픈뱅킹 -->
+
+			<div class="bg_lightprimary mt_10">
+				<p>Full Area</p>
+			</div>
+
+			<div class="container pb_4">
+				<div class="bg_lightprimary">
+					<p>Spacing Area</p>
+				</div>
+			</div>
+
+			<!-- s: 퀵바 로딩 _inc_bottom_quickbar.html -->
+			<div class="bottom_quickbar"></div>
+			<!-- e: 퀵바 로딩 -->
+
+			<!-- s: 공통 레이어 로딩 -->
+			<div class="common_layers"></div>
+			<!-- e: 공통 레이어 로딩 -->
+
+			<!-- e: 본문 -->
+		</div>
+	</div>
+</body>
+
+</html>
